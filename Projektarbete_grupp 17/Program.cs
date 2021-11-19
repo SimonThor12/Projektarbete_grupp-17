@@ -18,6 +18,10 @@ namespace Projektarbete_grupp_17
             string[] arrNyKommand = nykommand1.Split(",");
             string _ny1Kommand1 = arrNyKommand[0];
             string _ny2Kommand2 = arrNyKommand[1];
+            string _ny3Kommand3 = arrNyKommand[2];
+
+            
+            
 
         }
     }
