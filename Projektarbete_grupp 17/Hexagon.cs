@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    abstract class Former
+    class Hexagon
     {
-
     }
 }
