@@ -11,11 +11,9 @@ namespace Projektarbete_grupp_17
             string figur = "Circle,5,3,100";
 
             string[] arrKommand = kommando.Split(";");
+
             string nykommand1 = arrKommand[0];
             string nykommand2 = arrKommand[1];
-
-            string [] 
-
         }
     }
 }
