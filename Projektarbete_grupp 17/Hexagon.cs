@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class Hexagon: Former
+    class Hexagon: Polygon
     {
         public int lengthOfSides { get; private set; }
         double GetPerimeter()

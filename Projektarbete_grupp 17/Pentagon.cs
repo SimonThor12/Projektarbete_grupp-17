@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class Pentagon: Former
+    class Pentagon: Polygon
     {
         public int lengthOfSides { get; private set; }
         double GetPerimeter()
