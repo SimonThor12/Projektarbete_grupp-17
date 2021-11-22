@@ -16,9 +16,9 @@ namespace Projektarbete_grupp_17
 
         public double längdavsida { get; private set; }
 
-        public Polygon (Former(), int x, int y, int perimeter, int antalsidor)
+        public Polygon (Former(), int x, int y, int Perimeter, int antalsidor)
         {
-            perimeter = 
+            perimeter = Perimeter;
             //Ta in input
         }
         public double GetArea()
