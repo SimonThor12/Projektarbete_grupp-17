@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    interface Former
+    abstract class Form
     { 
         double GetArea();
 
+
+        public virtual void IsInside ()
+        {
+
+        }
     }
 }

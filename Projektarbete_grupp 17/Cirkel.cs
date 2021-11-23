@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class Cirkel : Former
+    class Cirkel : Form
     {
         public double Radie { get; private set; }
+
+        
         public double GetArea()
         {
             return Radie * Radie * Math.PI;
@@ -17,6 +19,23 @@ namespace Projektarbete_grupp_17
         public double GetPerimeter()
         {
             return 2*Radie * Math.PI;
+        }
+
+        public override bool  IsInside (Koordinat punkt, Koordinat mittpunkt)
+        {
+            double x1 = mittpunkt.x;
+            double x2 = punkt.x;
+            double y1 = mittpunkt.y;
+            double y2 = punkt.y;
+            double dist = Math.Sqrt(Math.Pow(x2 - x1,2) - Math.Pow(y2 - y1,2));
+            if (dist<Radie)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

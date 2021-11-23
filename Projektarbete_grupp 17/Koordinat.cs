@@ -8,13 +8,13 @@ namespace Projektarbete_grupp_17
 {
     class Koordinat
     {
-        public double y;
-        public double x;
+        public int y;
+        public int x;
 
         public Koordinat (string inputx, string inputy)
         {
-            y= double.Parse(inputy);
-            x = double.Parse(inputx);
+            y= int.Parse(inputy);
+            x = int.Parse(inputx);
         }
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class Fyrkant : Former
+    class Fyrkant : Form
     {
         public double Sida { get; private set; }
         public double Omkrets { get; private set; }
@@ -31,6 +31,5 @@ namespace Projektarbete_grupp_17
             Ymax = kordinater.y + (Sida / 2);
             Ymin = kordinater.y - (Sida / 2);
         }
-
     }
 }
