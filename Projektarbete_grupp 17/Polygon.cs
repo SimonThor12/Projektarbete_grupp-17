@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Projektarbete_grupp_17
 {
     //fisk i koden
-    abstract class Polygon
+    abstract class Polygon: Former
     {
         public int antalsidor { get; private set; }
 
