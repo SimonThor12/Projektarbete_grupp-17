@@ -10,6 +10,7 @@ namespace Projektarbete_grupp_17
     {
         public double Sida { get; private set; }
         public double Omkrets { get; private set; }
+
         public Koordinat kordinater; 
      
         public double Ymin { get; private set; }
