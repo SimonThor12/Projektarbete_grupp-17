@@ -17,7 +17,7 @@ namespace Projektarbete_grupp_17
 
         public double längdavsida { get; private set; }
 
-        public Polygon (Former(), int x, int y, int Perimeter, int antalsidor)
+        public Polygon (int x, int y, int Perimeter, int antalsidor)
         {
             perimeter = Perimeter;
             //Ta in input
@@ -50,5 +50,7 @@ namespace Projektarbete_grupp_17
             double apothem = c * Math.Sqrt(3);
             return apothem;
         }
+
+        public 
     }
 }
