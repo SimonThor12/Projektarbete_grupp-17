@@ -10,6 +10,11 @@ namespace Projektarbete_grupp_17
     {
         public double Radie { get; private set; }
 
+
+        public Cirkel (Koordinat Mittpunkt, int perimeter)
+        {
+            Radie = perimeter / (2 * Math.PI);
+        }
         
         public double GetArea()
         {
@@ -21,13 +26,13 @@ namespace Projektarbete_grupp_17
             return 2*Radie * Math.PI;
         }
 
-        public override bool  IsInside (Koordinat punkt, Koordinat mittpunkt)
+        public bool IsInside (Koordinat punkt, Koordinat mittpunkt)
         {
             double x1 = mittpunkt.x;
             double x2 = punkt.x;
             double y1 = mittpunkt.y;
             double y2 = punkt.y;
-            double dist = Math.Sqrt(Math.Pow(x2 - x1,2) - Math.Pow(y2 - y1,2));
+            double dist = Math.Sqrt(Math.Pow(x2 - x1,2) + Math.Pow(y2 - y1,2));
             if (dist<Radie)
             {
                 return true;

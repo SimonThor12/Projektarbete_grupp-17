@@ -11,7 +11,7 @@ namespace Projektarbete_grupp_17
         double GetArea();
 
 
-        public virtual void IsInside ()
+        public void IsInside ()
         {
 
         }
