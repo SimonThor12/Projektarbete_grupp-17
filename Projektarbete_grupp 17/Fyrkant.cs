@@ -8,16 +8,13 @@ namespace Projektarbete_grupp_17
 {
     class Fyrkant : Former
     {
-        public double Höjden { get; private set; }
-        public double Basen { get; private set; }
+        public double Sida { get; private set; }
+
         public double GetArea()
         {
-            return Höjden * Basen;
+            return Sida * Sida;
         }
 
-        public double GetPerimeter()
-        {
-            return 2*Höjden + 2*Basen;
-        }
+
     }
 }
