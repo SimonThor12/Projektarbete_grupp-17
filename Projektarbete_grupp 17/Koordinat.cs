@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class Oktagon : Polygon
+    class Koordinat
     {
-        public int sidAntal { get; private set; }
-        public int sidLängd { get; private set; }
+        int y;
+        int x;
 
-        public Oktagon (int sidAntal)
+        public Koordinat (string inputx, string inputy)
         {
-
+            y= int.Parse(inputy);
+            x = int.Parse(inputx);
         }
+
+
     }
 }
