@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class Punkt
+    class Punkt<Ipair>
     {
+        
         int y;
         int x;
         int pointscore;
@@ -18,5 +19,7 @@ namespace Projektarbete_grupp_17
             x = int.Parse(inputX);
             pointscore = int.Parse(_pointscore);
         }
+
+
     }
 }
