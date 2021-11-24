@@ -17,6 +17,7 @@ namespace Projektarbete_grupp_17
 
         public double längdavsida { get; private set; }
 
+        public double Radie { get; private set; }
         public Polygon (int x, int y, int Perimeter, int antalsidor)
         {
             perimeter = Perimeter;
@@ -51,6 +52,10 @@ namespace Projektarbete_grupp_17
             return apothem;
         }
 
-        public 
+        public double _Radie()
+        {
+            return Radie = Math.Sqrt(Math.Pow(längdavsida / 2, 2) + Math.Pow(apothem, 2));
+            
+        }
     }
 }
