@@ -6,7 +6,6 @@ namespace Projektarbete_grupp_17
     {
         static void Main(string[] args)
         {
-            IPair<int, int> koordinater = new Punkt<int, int>();
             string kommando = "1,1,5;2,2,10";
 
             string figur = "Circle,5,3,100";

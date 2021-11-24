@@ -14,10 +14,5 @@ namespace Projektarbete_grupp_17
         { 
             return (Sida * Sida)/ 2;
         }
-
-        public double GetPerimeter()
-        {
-            return Sida + Sida + Sida;
-        }
     }
 }
