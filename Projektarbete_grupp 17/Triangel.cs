@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class Triangel : Former
+    class Triangel : Form
     {
         public double Sida { get; private set; }
         
