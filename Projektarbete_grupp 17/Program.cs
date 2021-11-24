@@ -6,11 +6,12 @@ namespace Projektarbete_grupp_17
     {
         static void Main(string[] args)
         {
-            IPair<int, int> koordinater = new Punkt<int, int>();
+            
             string kommando = "1,1,5;2,2,10";
+            Fyrkant fyrkant = new Fyrkant("2", "3", 10);
 
             string figur = "Circle,5,3,100";
-
+            
             string[] arrKommand = kommando.Split(";");
 
             string nykommand1 = arrKommand[0];
