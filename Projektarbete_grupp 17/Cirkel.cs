@@ -32,8 +32,8 @@ namespace Projektarbete_grupp_17
             double x2 = punkt.x;
             double y1 = mittpunkt.y;
             double y2 = punkt.y;
-            double dist = Math.Sqrt(Math.Pow(x2 - x1,2) + Math.Pow(y2 - y1,2));
-            if (dist<Radie)
+            double disttopunkt = Math.Sqrt(Math.Pow(x2 - x1,2) + Math.Pow(y2 - y1,2));
+            if (disttopunkt<Radie)
             {
                 return true;
             }

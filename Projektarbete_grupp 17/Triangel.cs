@@ -14,5 +14,7 @@ namespace Projektarbete_grupp_17
         { 
             return (Sida * Sida)/ 2;
         }
+
+       
     }
 }

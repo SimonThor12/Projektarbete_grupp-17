@@ -6,23 +6,15 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    //fisk i koden
     abstract class Polygon: Form
     {
-        public int antalsidor { get; private set; }
-
+        public int antalsidor { get; set; }
         public int perimeter { get; private set; }
 
         public double apothem { get; private set; }
 
         public double längdavsida { get; private set; }
 
-        public double Radie { get; private set; }
-        public Polygon (int x, int y, int Perimeter, int antalsidor)
-        {
-            perimeter = Perimeter;
-            //Ta in input
-        }
         public double GetArea()
         {
             //Matematisk formel: A = 1/2 * apothem * perimeter
@@ -52,10 +44,10 @@ namespace Projektarbete_grupp_17
             return apothem;
         }
 
-        public double _Radie()
+        public virtual double GetRadie()
         {
-            return Radie = Math.Sqrt(Math.Pow(längdavsida / 2, 2) + Math.Pow(apothem, 2));
-            
+            double Radie = Math.Sqrt(Math.Pow(längdavsida / 2, 2) + Math.Pow(apothem, 2));
+            return Radie;
         }
     }
 }
