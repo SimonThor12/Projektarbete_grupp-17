@@ -10,40 +10,20 @@ namespace Projektarbete_grupp_17
     {
         public int kordinatSiffra1 { get; private set; }
         public int kordinatSiffra2 { get; private set; }
+        public Koordinat kordinater;
         
         public void OutPut1()
         {
             HandleInput1 argument1 = new HandleInput1();
             kordinatSiffra1 = argument1.x1;
             kordinatSiffra2 = argument1.y1;
-            
 
+            kordinater = new Koordinat(kordinatSiffra1, kordinatSiffra2);
             
 
         }
-        public bool InnanFörFyrkant()
-        {
-            Fyrkant fyrkant = new Fyrkant(3, 4, 20);
-            if (kordinatSiffra1 < fyrkant.Xmax)
-            {
-                return true;
-            }
-            else if (kordinatSiffra1 > fyrkant.Xmin)
-            {
-                return true;
-            }
-            else if (kordinatSiffra2 < fyrkant.Ymax)
-            {
-                return true;
-            }
-            else if (kordinatSiffra2 > fyrkant.Ymin)
-            {
-                 return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        
+
+
     }
 }

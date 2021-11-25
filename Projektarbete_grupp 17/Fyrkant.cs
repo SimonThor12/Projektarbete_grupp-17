@@ -11,7 +11,8 @@ namespace Projektarbete_grupp_17
         public double Sida { get; private set; }
         public double Omkrets { get; private set; }
 
-        public Koordinat kordinater; 
+        public Koordinat kordinaterFörEnFykant;
+        public HandleOutput fyrkanten;
      
         public double Ymin { get; private set; }
         public double Ymax { get; private set; }
@@ -24,12 +25,37 @@ namespace Projektarbete_grupp_17
         }
         public Fyrkant(int a, int b, double _omkrets)
         {
-            kordinater = new Koordinat(a, b);
+            kordinaterFörEnFykant = new Koordinat(a, b);
             Sida = _omkrets / 4;
-            Xmax = kordinater.x + (Sida / 2);
-            Xmin = kordinater.x - (Sida / 2);
-            Ymax = kordinater.y + (Sida / 2);
-            Ymin = kordinater.y - (Sida / 2);
+            Xmax = kordinaterFörEnFykant.x + (Sida / 2);
+            Xmin = kordinaterFörEnFykant.x - (Sida / 2);
+            Ymax = kordinaterFörEnFykant.y + (Sida / 2);
+            Ymin = kordinaterFörEnFykant.y - (Sida / 2);
+        }
+        public bool InnanFörFyrkant()
+        {
+            
+            
+            if (fyrkanten.kordinater.x < Xmax)
+            {
+                return true;
+            }
+            else if (fyrkanten.kordinater.x > Xmin)
+            {
+                return true;
+            }
+            else if (fyrkanten.kordinater.y < Ymax)
+            {
+                return true;
+            }
+            else if (fyrkanten.kordinater.y > Ymin)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
