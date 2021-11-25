@@ -11,7 +11,7 @@ namespace Projektarbete_grupp_17
         public string[] arg1Array;
         public string[] arg2Array;
         public string[] arg3Array;
-
+        
         public HandleInput(string arg1, string arg2, string arg3)
         {
             arg1Array = arg1.Split(";");
@@ -52,7 +52,7 @@ namespace Projektarbete_grupp_17
 
         
 
-        ;
+        
 
         
         
