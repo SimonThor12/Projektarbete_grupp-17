@@ -17,13 +17,18 @@ namespace Projektarbete_grupp_17
             arg1Array = arg1.Split(";");
             if (arg1Array.Length == 1)
             {
+                
                 string punkt1 = arg1Array[0];
                 
                 string[] punkt1Values = punkt1.Split(",");
+                for (int i = 0; i < punkt1Values.Length; i++)
+                {
+                    int x1 = Convert.ToInt32(punkt1Values[0]);
+                    int y1 = Convert.ToInt32(punkt1Values[1]);
+                    int s1 = Convert.ToInt32(punkt1Values[2]);
+                }
 
-                string Xvärdepunkt1 = punkt1Values[0];
-                string Yvärdepunkt1 = punkt1Values[1];
-                string Score = punkt1Values[2];
+               
             }
             else if (arg1Array.Length == 2)
             {
@@ -33,13 +38,13 @@ namespace Projektarbete_grupp_17
                 string[] punkt1Values = punkt1.Split(",");
                 string[] punkt2Values = punkt2.Split(",");
 
-                string Xvärdepunkt1 = punkt1Values[0];
-                string Yvärdepunkt1 = punkt1Values[1];
-                string Score1 = punkt1Values[2];
+                int x1 = Convert.ToInt32(punkt1Values[0]);
+                int y1 = Convert.ToInt32(punkt1Values[1]);
+                int s1 = Convert.ToInt32(punkt1Values[2]);
 
-                string Xvärdepunkt2 = punkt2Values[0];
-                string Yvärdepunkt2 = punkt2Values[1];
-                string Score2 = punkt2Values[2];
+                int x2 = Convert.ToInt32(punkt2Values[0]);
+                int y2 = Convert.ToInt32(punkt2Values[1]);
+                int s2 = Convert.ToInt32(punkt2Values[2]);
             }
                     
             
