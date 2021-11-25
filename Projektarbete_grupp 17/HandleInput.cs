@@ -37,9 +37,9 @@ namespace Projektarbete_grupp_17
                 string Yvärdepunkt1 = punkt1Values[1];
                 string Score1 = punkt1Values[2];
 
-                string Xvärdepunkt2 = punkt1Values[0];
-                string Yvärdepunkt2 = punkt1Values[1];
-                string Score2 = punkt1Values[2];
+                string Xvärdepunkt2 = punkt2Values[0];
+                string Yvärdepunkt2 = punkt2Values[1];
+                string Score2 = punkt2Values[2];
             }
                     
             
