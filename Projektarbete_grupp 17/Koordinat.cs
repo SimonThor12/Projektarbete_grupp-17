@@ -11,10 +11,10 @@ namespace Projektarbete_grupp_17
         public int y;
         public int x;
 
-        public Koordinat (string inputx, string inputy)
+        public Koordinat (int inputx, int inputy)
         {
-            y= int.Parse(inputy);
-            x = int.Parse(inputx);
+            y= inputy;
+            x = inputx;
         }
 
 
