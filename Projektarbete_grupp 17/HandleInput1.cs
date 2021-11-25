@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class HandleInput
+    class HandleInput1
     {
         public string[] arg1Array;
-        public string[] arg2Array;
-        public string[] arg3Array;
+        
         public int x1;
         public int y1;
         public int s1;
@@ -18,7 +17,7 @@ namespace Projektarbete_grupp_17
         public int y2;
         public int s2;
 
-        public HandleInput(string arg1, string arg2, string arg3)
+        public HandleInput1(string arg1)
         {
             arg1Array = arg1.Split(";");
             if (arg1Array.Length == 1)
