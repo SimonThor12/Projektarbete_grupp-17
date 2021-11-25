@@ -14,7 +14,34 @@ namespace Projektarbete_grupp_17
 
         public HandleInput(string arg1, string arg2, string arg3)
         {
-            string[] arrKommand = arg1.Split(";");
+            arg1Array = arg1.Split(";");
+            if (arg1Array.Length == 1)
+            {
+                string punkt1 = arg1Array[0];
+                
+                string[] punkt1Values = punkt1.Split(",");
+
+                string Xvärdepunkt1 = punkt1Values[0];
+                string Yvärdepunkt1 = punkt1Values[1];
+                string Score = punkt1Values[2];
+            }
+            else if (arg1Array.Length == 2)
+            {
+                string punkt1 = arg1Array[0];
+                string punkt2 = arg1Array[1];
+
+                string[] punkt1Values = punkt1.Split(",");
+                string[] punkt2Values = punkt2.Split(",");
+
+                string Xvärdepunkt1 = punkt1Values[0];
+                string Yvärdepunkt1 = punkt1Values[1];
+                string Score1 = punkt1Values[2];
+
+                string Xvärdepunkt2 = punkt1Values[0];
+                string Yvärdepunkt2 = punkt1Values[1];
+                string Score2 = punkt1Values[2];
+            }
+                    
             
         }
 
@@ -22,10 +49,8 @@ namespace Projektarbete_grupp_17
 
         ;
 
-        string[] punktArray = punkt1.Split(",");
-        string Xvärde = punktArray[0];
-        string Yvärde = punktArray[1];
-        string Score = punktArray[2];
+        
+        
     }
         
     
