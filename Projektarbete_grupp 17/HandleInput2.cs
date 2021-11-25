@@ -26,33 +26,39 @@ namespace Projektarbete_grupp_17
         {
             arg2Array = arg2.Split(";");
 
+            for (int i = 0; i < arg2Array.Length; i++)
+            {
+                string[] form1Values = arg2Array[i].Split(",");
+                form1 = form1Values[0].Trim();
+                form2 = form2Values[0].Trim();
+
+                for (int i = 1; i < form1Values.Length; i++)
+                {
+                    x1 = Convert.ToInt32(form1Values[1]);
+
+                    y1 = Convert.ToInt32(form1Values[2]);
+
+                    perimeter1 = Convert.ToInt32(form1Values[3]);
+                }
+            }
+            
+
+            
+
             switch (arg2Array.Length)
             {
                 case 1:
 
-                    string form1 = arg2Array[0];
-
-                    string[] form1Values = form1.Split(",");
-
-                    form1 = form1Values[0].Trim();
-
-                    for (int i = 1; i < form1.Length; i++)
-                    {
-                            x1 = Convert.ToInt32(form1Values[1]);
-                            
-                            y1 = Convert.ToInt32(form1Values[2]);
-                            
-                            perimeter1 = Convert.ToInt32(form1Values[3]);
-                    }
+                    
                     break;
 
                 case 2:
 
-                    string form2 = arg2Array[0];
+                    form1 = arg2Array[0];
 
-                    string[] form2Values = form2.Split(",");
+                    form1Values = form1.Split(",");
 
-                    form2 = form2Values[0].Trim();
+                    form1 = form1Values[0].Trim();
 
                     for (int i = 1; i < form1.Length; i++)
                     {
@@ -62,6 +68,12 @@ namespace Projektarbete_grupp_17
 
                         perimeter1 = Convert.ToInt32(form1Values[3]);
                     }
+                    break;
+                case 3:
+                   
+                    break;
+                case 4:
+
                     break;
 
 
