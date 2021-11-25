@@ -30,9 +30,9 @@ namespace Projektarbete_grupp_17
                 {
                     if (punkt1Values[i]!=" ")
                     {
-                        int x1 = Convert.ToInt32(punkt1Values[0]);
-                        int y1 = Convert.ToInt32(punkt1Values[1]);
-                        int s1 = Convert.ToInt32(punkt1Values[2]);
+                         x1 = Convert.ToInt32(punkt1Values[0]);
+                         y1 = Convert.ToInt32(punkt1Values[1]);
+                         s1 = Convert.ToInt32(punkt1Values[2]);
                     }
                 }
             }
@@ -48,9 +48,9 @@ namespace Projektarbete_grupp_17
                 {
                     if (punkt1Values[i] != " ")
                     {
-                        int x1 = Convert.ToInt32(punkt1Values[0]);
-                        int y1 = Convert.ToInt32(punkt1Values[1]);
-                        int s1 = Convert.ToInt32(punkt1Values[2]);
+                        x1 = Convert.ToInt32(punkt1Values[0]);
+                        y1 = Convert.ToInt32(punkt1Values[1]);
+                        s1 = Convert.ToInt32(punkt1Values[2]);
                     }
 
                 }
@@ -59,9 +59,9 @@ namespace Projektarbete_grupp_17
                 {
                     if (punkt1Values[i] != " ")
                     {
-                        int x2 = Convert.ToInt32(punkt2Values[0]);
-                        int y2 = Convert.ToInt32(punkt2Values[1]);
-                        int s2 = Convert.ToInt32(punkt2Values[2]);
+                        x2 = Convert.ToInt32(punkt2Values[0]);
+                        y2 = Convert.ToInt32(punkt2Values[1]);
+                        s2 = Convert.ToInt32(punkt2Values[2]);
                     }
 
                 }
