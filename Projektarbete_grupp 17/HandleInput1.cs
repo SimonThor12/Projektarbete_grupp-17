@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class HandleInput
+    class HandleInput1
     {
         public string[] arg1Array;
-        public string[] arg2Array;
-        public string[] arg3Array;
+        
         public int x1;
         public int y1;
         public int s1;
@@ -18,7 +17,7 @@ namespace Projektarbete_grupp_17
         public int y2;
         public int s2;
 
-        public HandleInput(string arg1, string arg2, string arg3)
+        public HandleInput1(string arg1)
         {
             arg1Array = arg1.Split(";");
             if (arg1Array.Length == 1)
@@ -30,9 +29,9 @@ namespace Projektarbete_grupp_17
                 {
                     if (punkt1Values[i]!=" ")
                     {
-                         x1 = Convert.ToInt32(punkt1Values[0]);
-                         y1 = Convert.ToInt32(punkt1Values[1]);
-                         s1 = Convert.ToInt32(punkt1Values[2]);
+                         x1 = Convert.ToInt32(punkt1Values[i]);
+                         y1 = Convert.ToInt32(punkt1Values[i]);
+                         s1 = Convert.ToInt32(punkt1Values[i]);
                     }
                 }
             }
@@ -48,9 +47,9 @@ namespace Projektarbete_grupp_17
                 {
                     if (punkt1Values[i] != " ")
                     {
-                        x1 = Convert.ToInt32(punkt1Values[0]);
-                        y1 = Convert.ToInt32(punkt1Values[1]);
-                        s1 = Convert.ToInt32(punkt1Values[2]);
+                        x1 = Convert.ToInt32(punkt1Values[i]);
+                        y1 = Convert.ToInt32(punkt1Values[i]);
+                        s1 = Convert.ToInt32(punkt1Values[i]);
                     }
 
                 }
@@ -59,9 +58,9 @@ namespace Projektarbete_grupp_17
                 {
                     if (punkt1Values[i] != " ")
                     {
-                        x2 = Convert.ToInt32(punkt2Values[0]);
-                        y2 = Convert.ToInt32(punkt2Values[1]);
-                        s2 = Convert.ToInt32(punkt2Values[2]);
+                        x2 = Convert.ToInt32(punkt2Values[i]);
+                        y2 = Convert.ToInt32(punkt2Values[i]);
+                        s2 = Convert.ToInt32(punkt2Values[i]);
                     }
 
                 }
