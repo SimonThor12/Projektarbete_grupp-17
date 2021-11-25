@@ -53,13 +53,13 @@ namespace Projektarbete_grupp_17
 
                 }
 
-                for (int i = 0; i < punkt1Values.Length; i++)
+                for (int i = 0; i < punkt2Values.Length; i++)
                 {
                     if (punkt1Values[i] != " ")
                     {
-                        int x1 = Convert.ToInt32(punkt1Values[0]);
-                        int y1 = Convert.ToInt32(punkt1Values[1]);
-                        int s1 = Convert.ToInt32(punkt1Values[2]);
+                        int x2 = Convert.ToInt32(punkt2Values[0]);
+                        int y2 = Convert.ToInt32(punkt2Values[1]);
+                        int s2 = Convert.ToInt32(punkt2Values[2]);
                     }
 
                 }
