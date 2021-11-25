@@ -22,7 +22,7 @@ namespace Projektarbete_grupp_17
         {
             return Sida * Sida;
         }
-        public Fyrkant(string a, string b, double _omkrets)
+        public Fyrkant(int a, int b, double _omkrets)
         {
             kordinater = new Koordinat(a, b);
             Sida = _omkrets / 4;
