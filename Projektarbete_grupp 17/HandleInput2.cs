@@ -20,7 +20,6 @@ namespace Projektarbete_grupp_17
         int perimeter3;
         int perimeter4;
 
-
         public HandleInput2 (string arg2)
 
         {
