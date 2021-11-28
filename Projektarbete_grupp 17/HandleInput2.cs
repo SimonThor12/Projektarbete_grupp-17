@@ -50,7 +50,6 @@ namespace Projektarbete_grupp_17
                     string form1trim = arg2Array[0].Trim();
                     form1Values = form1trim.Split(",");
                     
-                    
                     form1 = form1Values[0];
                     x1 = Convert.ToInt32(form1Values[1]);
                     y1 = Convert.ToInt32(form1Values[2]);
