@@ -13,70 +13,141 @@ namespace Projektarbete_grupp_17
         string form2;
         string form3;
         string form4;
+
         int x1;
+        int x2;
+        int x3;
+        int x4;
+
         int y1;
+        int y2;
+        int y3;
+        int y4;
+
         int perimeter1;
         int perimeter2;
         int perimeter3;
         int perimeter4;
 
+        string [] form1Values;
+        string[] form2Values;
+        string[] form3Values;
+        string[] form4Values;
+
+
+
+        //Tar in "Circle,x,y,perimeter  ;  triangle,x,y,perimeter;"
         public HandleInput2 (string arg2)
 
         {
             arg2Array = arg2.Split(";");
-
-            for (int i = 0; i < arg2Array.Length; i++)
-            {
-                string[] form1Values = arg2Array[i].Split(",");
-                form1 = form1Values[0].Trim();
-                form2 = form2Values[0].Trim();
-
-                for (int i = 1; i < form1Values.Length; i++)
-                {
-                    x1 = Convert.ToInt32(form1Values[1]);
-
-                    y1 = Convert.ToInt32(form1Values[2]);
-
-                    perimeter1 = Convert.ToInt32(form1Values[3]);
-                }
-            }
-            
-
-            
+          
 
             switch (arg2Array.Length)
             {
                 case 1:
 
+                    string form1trim = arg2Array[0].Trim();
+                    form1Values = form1trim.Split(",");
                     
+                    
+                    form1 = form1Values[0];
+                    x1 = Convert.ToInt32(form1Values[1]);
+                    y1 = Convert.ToInt32(form1Values[2]);
+                    perimeter1 = Convert.ToInt32(form1Values[3]);
+
                     break;
 
                 case 2:
 
-                    form1 = arg2Array[0];
+                    form1trim = arg2Array[0].Trim();
+                    form1Values = form1trim.Split(",");
 
-                    form1Values = form1.Split(",");
+                    string form2trim = arg2Array[1].Trim();
+                    form2Values = form2trim.Split(",");
 
-                    form1 = form1Values[0].Trim();
 
-                    for (int i = 1; i < form1.Length; i++)
-                    {
-                        x1 = Convert.ToInt32(form1Values[1]);
 
-                        y1 = Convert.ToInt32(form1Values[2]);
+                    form1 = form1Values[0];
+                    x1 = Convert.ToInt32(form1Values[1]);
+                    y1 = Convert.ToInt32(form1Values[2]);
+                    perimeter1 = Convert.ToInt32(form1Values[3]);
 
-                        perimeter1 = Convert.ToInt32(form1Values[3]);
-                    }
+                    form2 = form2Values[0];
+                    x2 = Convert.ToInt32(form2Values[1]);
+                    y2 = Convert.ToInt32(form2Values[2]);
+                    perimeter2 = Convert.ToInt32(form2Values[3]);
+
+
                     break;
                 case 3:
-                   
+
+                    form1trim = arg2Array[0].Trim();
+                    form1Values = form1trim.Split(",");
+
+                    form2trim = arg2Array[1].Trim();
+                    form2Values = form2trim.Split(",");
+
+                    string form3trim = arg2Array[2].Trim();
+                    form3Values = form3trim.Split(",");
+
+
+
+                    form1 = form1Values[0];
+                    x1 = Convert.ToInt32(form1Values[1]);
+                    y1 = Convert.ToInt32(form1Values[2]);
+                    perimeter1 = Convert.ToInt32(form1Values[3]);
+
+                    form2 = form2Values[0];
+                    x2 = Convert.ToInt32(form2Values[1]);
+                    y2 = Convert.ToInt32(form2Values[2]);
+                    perimeter2 = Convert.ToInt32(form2Values[3]);
+
+                    form3 = form3Values[0];
+                    x3 = Convert.ToInt32(form3Values[1]);
+                    y3 = Convert.ToInt32(form3Values[2]);
+                    perimeter3 = Convert.ToInt32(form3Values[3]);
+
                     break;
                 case 4:
 
+                    form1trim = arg2Array[0].Trim();
+                    form1Values = form1trim.Split(",");
+
+                    form2trim = arg2Array[1].Trim();
+                    form2Values = form2trim.Split(",");
+
+                    form3trim = arg2Array[2].Trim();
+                    form3Values = form3trim.Split(",");
+
+                    string form4trim = arg2Array[3].Trim();
+                    form4Values = form4trim.Split(",");
+
+
+
+
+
+                    form1 = form1Values[0];
+                    x1 = Convert.ToInt32(form1Values[1]);
+                    y1 = Convert.ToInt32(form1Values[2]);
+                    perimeter1 = Convert.ToInt32(form1Values[3]);
+
+                    form2 = form2Values[0];
+                    x2 = Convert.ToInt32(form2Values[1]);
+                    y2 = Convert.ToInt32(form2Values[2]);
+                    perimeter2 = Convert.ToInt32(form2Values[3]);
+
+                    form3 = form3Values[0];
+                    x3 = Convert.ToInt32(form3Values[1]);
+                    y3 = Convert.ToInt32(form3Values[2]);
+                    perimeter3 = Convert.ToInt32(form3Values[3]);
+
+                    form4 = form4Values[0];
+                    x4 = Convert.ToInt32(form4Values[1]);
+                    y4 = Convert.ToInt32(form4Values[2]);
+                    perimeter4 = Convert.ToInt32(form4Values[3]);
+
                     break;
-
-
-
 
             }
 
