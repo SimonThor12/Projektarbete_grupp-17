@@ -14,8 +14,8 @@ namespace Projektarbete_grupp_17
         public int kordinatSiffra4 { get; private set; }
         public int pointScore1 { get; private set; }
         public int pointScore2 { get; private set; }
-        public int x { get; private set; }
-        public int y { get; private set; }
+        public int X { get; private set; }
+        public int Y { get; private set; }
         public int perimeter { get; private set; }
         public int shapeScore { get; private set; }
         public Koordinat kordinater1;
@@ -44,8 +44,8 @@ namespace Projektarbete_grupp_17
         {
             if (argument2.form1 == "Square")
             {
-                x = argument2.x1;
-                y = argument2.y1;
+                X = argument2.x1;
+                Y = argument2.y1;
                 perimeter = argument2.perimeter1;
                 //shapeScore = argument3.score1;
                 OutPut1Fyrkant();
@@ -53,24 +53,24 @@ namespace Projektarbete_grupp_17
             }
             if(argument2.form2 == "Square")
             {
-                x = argument2.x2;
-                y = argument2.y2;
+                X = argument2.x2;
+                Y = argument2.y2;
                 perimeter = argument2.perimeter2;
                 //shapeScore = argument3.score2;
                 OutPut1Fyrkant();
             }
             if(argument2.form3 == "Square")
             {
-                x = argument2.x3;
-                y = argument2.y3;
+                X = argument2.x3;
+                Y = argument2.y3;
                 perimeter = argument2.perimeter3;
                 //shapeScore = argument3.score3;
                 OutPut1Fyrkant();
             }
             if(argument2.form4 == "Square")
             {
-                x = argument2.x4;
-                y = argument2.y4;
+                X = argument2.x4;
+                Y = argument2.y4;
                 perimeter = argument2.perimeter4;
                 //shapeScore = argument3.score4;
                 OutPut1Fyrkant();
@@ -80,7 +80,7 @@ namespace Projektarbete_grupp_17
         public long OutPut1Fyrkant()
         {
 
-            Fyrkant fyrkanten = new Fyrkant(x, y, perimeter);
+            Fyrkant fyrkanten = new Fyrkant(X, Y, perimeter);
             if (fyrkanten.InnanFörFyrkantKordinat1())
             {
                 return (long)fyrkanten.GetArea() * pointScore1 * shapeScore;
