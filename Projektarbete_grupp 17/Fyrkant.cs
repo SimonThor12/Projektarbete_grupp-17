@@ -39,15 +39,15 @@ namespace Projektarbete_grupp_17
             {
                 return true;
             }
-            else if (fyrkanten.kordinater1.x > Xmin)
+            if (fyrkanten.kordinater1.x > Xmin)
             {
                 return true;
             }
-            else if (fyrkanten.kordinater1.y < Ymax)
+            if (fyrkanten.kordinater1.y < Ymax)
             {
                 return true;
             }
-            else if (fyrkanten.kordinater1.y > Ymin)
+            if (fyrkanten.kordinater1.y > Ymin)
             {
                 return true;
             }
@@ -63,15 +63,15 @@ namespace Projektarbete_grupp_17
             {
                 return true;
             }
-            else if (fyrkanten.kordinater2.x > Xmin)
+            if (fyrkanten.kordinater2.x > Xmin)
             {
                 return true;
             }
-            else if (fyrkanten.kordinater2.y < Ymax)
+            if (fyrkanten.kordinater2.y < Ymax)
             {
                 return true;
             }
-            else if (fyrkanten.kordinater2.y > Ymin)
+            if (fyrkanten.kordinater2.y > Ymin)
             {
                 return true;
             }
