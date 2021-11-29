@@ -20,17 +20,34 @@ namespace Projektarbete_grupp_17
         public HandleInput1(string arg1)
         {
             arg1Array = arg1.Split(";");
+
+            if (arg1.ToArray().Length == 1 && arg1.Contains(";"))
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("Your input for the points is incorrect.\n" +
+                    " It should follow this format: X, Y, SCORE." +
+                    " Each point should also be separated with a ‘;’");
+            }
+
             if (arg1Array.Length == 1)
             {
                 string punkt1 = arg1Array[0].Trim();
 
                 string[] punkt1Values = punkt1.Split(",");
-                for (int i = 0; i < punkt1Values.Length; i++)
+
+                //Felhantering
+                if (punkt1Values.Length<3 || punkt1Values.Length>3)
                 {
-                         x1 = Convert.ToInt32(punkt1Values[i]);
-                         y1 = Convert.ToInt32(punkt1Values[i]);
-                         s1 = Convert.ToInt32(punkt1Values[i]);
+
                 }
+
+                        //Värden för punkt 1
+                         x1 = Convert.ToInt32(punkt1Values[0]);
+                         y1 = Convert.ToInt32(punkt1Values[1]);
+                         s1 = Convert.ToInt32(punkt1Values[2]);
             }
             else if (arg1Array.Length == 2)
             {
@@ -40,21 +57,17 @@ namespace Projektarbete_grupp_17
                 string[] punkt1Values = punkt1.Split(",");
                 string[] punkt2Values = punkt2.Split(",");
 
-                for (int i = 0; i < punkt1Values.Length; i++)
-                {
-                        x1 = Convert.ToInt32(punkt1Values[i]);
-                        y1 = Convert.ToInt32(punkt1Values[i]);
-                        s1 = Convert.ToInt32(punkt1Values[i]);
+                        //Värden för punkt 1
+                        x1 = Convert.ToInt32(punkt1Values[0]);
+                        y1 = Convert.ToInt32(punkt1Values[1]);
+                        s1 = Convert.ToInt32(punkt1Values[2]);
+                
+
+                        //Värden för punkt 2
+                        x2 = Convert.ToInt32(punkt2Values[0]);
+                        y2 = Convert.ToInt32(punkt2Values[1]);
+                        s2 = Convert.ToInt32(punkt2Values[2]);
                 }
-
-                for (int i = 0; i < punkt2Values.Length; i++)
-                {
-                        x2 = Convert.ToInt32(punkt2Values[i]);
-                        y2 = Convert.ToInt32(punkt2Values[i]);
-                        s2 = Convert.ToInt32(punkt2Values[i]);
-                }
-
-
 
             }
 
@@ -70,4 +83,4 @@ namespace Projektarbete_grupp_17
     }
         
     
-}
+

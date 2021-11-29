@@ -17,7 +17,5 @@ namespace Projektarbete_grupp_17
             x = inputx;
         }
 
-
-
     }
 }

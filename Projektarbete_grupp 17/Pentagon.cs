@@ -14,10 +14,10 @@ namespace Projektarbete_grupp_17
         {
 
         }
-        double GetArea()
-        {
-            double area = 0.25 * Math.Sqrt(5 * (5 + 2 * Math.Sqrt(5))) * Math.Pow(lengthOfSides, 2);
-            return area;
-        }
+        //double GetArea()
+        //{
+        //    double area = 0.25 * Math.Sqrt(5 * (5 + 2 * Math.Sqrt(5))) * Math.Pow(lengthOfSides, 2);
+        //    return area;
+        //}
     }
 }

@@ -37,9 +37,6 @@ namespace Projektarbete_grupp_17
             koordinatForm2 = new Koordinat(input2.x2, input2.y2);
             koordinatForm3 = new Koordinat(input2.x3, input2.y3);
             koordinatForm4 = new Koordinat(input2.x4, input2.y4);
-
-
-
         }
 
         public void OutPut1()
@@ -51,8 +48,8 @@ namespace Projektarbete_grupp_17
 
             pointScore1 = argument1.s1;
             pointScore2 = argument1.s2;
-            kordinater1 = new Koordinat(kordinatSiffra1, kordinatSiffra2);
-            kordinater2 = new Koordinat(kordinatSiffra3, kordinatSiffra4);
+            //kordinater1 = new Koordinat(kordinatSiffra1, kordinatSiffra2);
+            //kordinater2 = new Koordinat(kordinatSiffra3, kordinatSiffra4);
 
 
 
@@ -62,61 +59,61 @@ namespace Projektarbete_grupp_17
 
         }
 
-        public void FormenÄrFyrkant()
-        {
-            if (argument2.form1 == "Square")
-            {
-                X = argument2.x1;
-                Y = argument2.y1;
-                perimeter = argument2.perimeter1;
+        //public void FormenÄrFyrkant()
+        //{
+        //    if (argument2.form1 == "Square")
+        //    {
+        //        X = argument2.x1;
+        //        Y = argument2.y1;
+        //        perimeter = argument2.perimeter1;
         
-                // shapeScore = argument3.score1;
-                OutPut1Fyrkant();
+        //        // shapeScore = argument3.score1;
+        //        OutPut1Fyrkant();
 
-            }
-            if(argument2.form2 == "Square")
-            {
-                X = argument2.x2;
-                Y = argument2.y2;
-                perimeter = argument2.perimeter2;
-                //shapeScore = argument3.score2;
-                OutPut1Fyrkant();
-            }
-            if(argument2.form3 == "Square")
-            {
-                X = argument2.x3;
-                Y = argument2.y3;
-                perimeter = argument2.perimeter3;
-                //shapeScore = argument3.score3;
-                OutPut1Fyrkant();
-            }
-            if(argument2.form4 == "Square")
-            {
-                X = argument2.x4;
-                Y = argument2.y4;
-                perimeter = argument2.perimeter4;
-                //shapeScore = argument3.score4;
-                OutPut1Fyrkant();
-            }
+        //    }
+        //    if(argument2.form2 == "Square")
+        //    {
+        //        X = argument2.x2;
+        //        Y = argument2.y2;
+        //        perimeter = argument2.perimeter2;
+        //        //shapeScore = argument3.score2;
+        //        OutPut1Fyrkant();
+        //    }
+        //    if(argument2.form3 == "Square")
+        //    {
+        //        X = argument2.x3;
+        //        Y = argument2.y3;
+        //        perimeter = argument2.perimeter3;
+        //        //shapeScore = argument3.score3;
+        //        OutPut1Fyrkant();
+        //    }
+        //    if(argument2.form4 == "Square")
+        //    {
+        //        X = argument2.x4;
+        //        Y = argument2.y4;
+        //        perimeter = argument2.perimeter4;
+        //        //shapeScore = argument3.score4;
+        //        OutPut1Fyrkant();
+        //    }
             
-        }
-        public long OutPut1Fyrkant()
-        {
+        //}
+        //public long OutPut1Fyrkant()
+        //{
 
-            Fyrkant fyrkanten = new Fyrkant(X, Y, perimeter);
-            if (fyrkanten.InnanFörFyrkantKordinat1())
-            {
-                return (long)fyrkanten.GetArea() * pointScore1 * shapeScore;
-            }
-            if (fyrkanten.InnanFörFyrkantKordinat2())
-            {
-                return (long)fyrkanten.GetArea() * pointScore2 * shapeScore;
-            }
-            else
-            {
-                return (long)(fyrkanten.GetArea() * shapeScore) / 4;
-            }
-        }
+        //    Fyrkant fyrkanten = new Fyrkant(X, Y, perimeter);
+        //    if (fyrkanten.InnanFörFyrkantKordinat1())
+        //    {
+        //        return (long)fyrkanten.GetArea() * pointScore1 * shapeScore;
+        //    }
+        //    if (fyrkanten.InnanFörFyrkantKordinat2())
+        //    {
+        //        return (long)fyrkanten.GetArea() * pointScore2 * shapeScore;
+        //    }
+        //    else
+        //    {
+        //        return (long)(fyrkanten.GetArea() * shapeScore) / 4;
+        //    }
+        //}
         /*public long OutPut1Cirkel()
         {
             Cirkel cirkeln = new Cirkel(20);
