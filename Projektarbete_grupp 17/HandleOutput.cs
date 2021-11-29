@@ -18,12 +18,30 @@ namespace Projektarbete_grupp_17
         public int Y { get; private set; }
         public int perimeter { get; private set; }
         public int shapeScore { get; private set; }
-        public Koordinat kordinater1;
-        public Koordinat kordinater2;
+        public Koordinat punktKoordinat1;
+        public Koordinat punktKoordinat2;
+        public Koordinat koordinatForm1;
+        public Koordinat koordinatForm2;
+        public Koordinat koordinatForm3;
+        public Koordinat koordinatForm4;
         public HandleInput2 argument2;
         public HandleInput1 argument1;
         public HandleInput3 argument3;
         
+        public HandleOutput (HandleInput1 input1, HandleInput2 input2, HandleInput3 input3)
+        {
+            punktKoordinat1 = new Koordinat(input1.x1, input1.y1);
+            punktKoordinat2 = new Koordinat(input1.x2, input1.y2);
+
+            koordinatForm1 = new Koordinat(input2.x1, input2.y1);
+            koordinatForm2 = new Koordinat(input2.x2, input2.y2);
+            koordinatForm3 = new Koordinat(input2.x3, input2.y3);
+            koordinatForm4 = new Koordinat(input2.x4, input2.y4);
+
+
+
+        }
+
         public void OutPut1()
         {
             kordinatSiffra1 = argument1.x1;
