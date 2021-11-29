@@ -34,8 +34,7 @@ namespace Projektarbete_grupp_17
         }
         public bool InnanFörFyrkant()
         {
-            
-            
+
             if (fyrkanten.kordinater.x < Xmax)
             {
                 return true;

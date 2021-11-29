@@ -11,7 +11,7 @@ namespace Projektarbete_grupp_17
         public double Radie { get; private set; }
 
 
-        public Cirkel (Koordinat Mittpunkt, int perimeter)
+        public Cirkel (/*Koordinat Mittpunkt, */int perimeter)
         {
             Radie = perimeter / (2 * Math.PI);
         }
