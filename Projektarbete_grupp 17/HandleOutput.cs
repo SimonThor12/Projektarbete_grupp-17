@@ -16,10 +16,12 @@ namespace Projektarbete_grupp_17
         public int pointScore2 { get; private set; }
         public Koordinat kordinater1;
         public Koordinat kordinater2;
+        public HandleInput2 argument2;
+        public HandleInput1 argument1;
         
         public void OutPut1()
         {
-            HandleInput1 argument1 = new HandleInput1();
+            argument1 = new HandleInput1();
             kordinatSiffra1 = argument1.x1;
             kordinatSiffra2 = argument1.y1;
             kordinatSiffra3 = argument1.x2;
@@ -30,9 +32,12 @@ namespace Projektarbete_grupp_17
             kordinater1 = new Koordinat(kordinatSiffra1, kordinatSiffra2);
             kordinater2 = new Koordinat(kordinatSiffra3, kordinatSiffra4);
 
+            argument2 = new HandleInput2();
+
         }
         public long OutPut1Fyrkant()
         {
+            if(argument2.form1)
             Fyrkant fyrkanten = new Fyrkant(kordinatSiffra1,kordinatSiffra2, 20);
             if (fyrkanten.InnanFörFyrkant())
             {

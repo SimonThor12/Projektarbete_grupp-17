@@ -9,10 +9,10 @@ namespace Projektarbete_grupp_17
     class HandleInput2
     {
         public string[] arg2Array;
-        string form1;
-        string form2;
-        string form3;
-        string form4;
+        public string form1;
+        public string form2;
+        public string form3;
+        public string form4;
 
         int x1;
         int x2;
