@@ -35,19 +35,7 @@ namespace Projektarbete_grupp_17
         public bool InnanFörFyrkantKordinat1()
         {
 
-            if (fyrkanten.kordinater1.x < Xmax)
-            {
-                return true;
-            }
-            if (fyrkanten.kordinater1.x > Xmin)
-            {
-                return true;
-            }
-            if (fyrkanten.kordinater1.y < Ymax)
-            {
-                return true;
-            }
-            if (fyrkanten.kordinater1.y > Ymin)
+            if (fyrkanten.kordinater1.x < Xmax && fyrkanten.kordinater1.x > Xmin && fyrkanten.kordinater1.y < Ymax && fyrkanten.kordinater1.y > Ymin)
             {
                 return true;
             }
@@ -59,19 +47,7 @@ namespace Projektarbete_grupp_17
         public bool InnanFörFyrkantKordinat2()
         {
 
-            if (fyrkanten.kordinater2.x < Xmax)
-            {
-                return true;
-            }
-            if (fyrkanten.kordinater2.x > Xmin)
-            {
-                return true;
-            }
-            if (fyrkanten.kordinater2.y < Ymax)
-            {
-                return true;
-            }
-            if (fyrkanten.kordinater2.y > Ymin)
+            if (fyrkanten.kordinater2.x < Xmax && fyrkanten.kordinater2.x > Xmin && fyrkanten.kordinater2.y < Ymax && fyrkanten.kordinater2.y > Ymin)
             {
                 return true;
             }
