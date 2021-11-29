@@ -15,10 +15,10 @@ namespace Projektarbete_grupp_17
         string form3;
         string form4;
 
-        int score1;
-        int score2;
-        int score3;
-        int score4;
+        public int score1;
+        public int score2;
+        public int score3;
+        public int score4;
 
         string[] ShapeScore1Values;
         string[] shapeScore2Values;

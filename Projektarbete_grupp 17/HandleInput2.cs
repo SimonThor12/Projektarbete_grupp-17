@@ -14,20 +14,20 @@ namespace Projektarbete_grupp_17
         public string form3;
         public string form4;
 
-        int x1;
-        int x2;
-        int x3;
-        int x4;
+        public int x1;
+        public int x2;
+        public int x3;
+        public int x4;
 
-        int y1;
-        int y2;
-        int y3;
-        int y4;
+        public int y1;
+        public int y2;
+        public int y3;
+        public int y4;
 
-        int perimeter1;
-        int perimeter2;
-        int perimeter3;
-        int perimeter4;
+        public int perimeter1;
+        public int perimeter2;
+        public int perimeter3;
+        public int perimeter4;
 
         string [] form1Values;
         string[] form2Values;

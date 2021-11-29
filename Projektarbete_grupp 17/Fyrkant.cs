@@ -13,12 +13,12 @@ namespace Projektarbete_grupp_17
 
         public Koordinat kordinaterFörEnFykant;
         public HandleOutput fyrkanten;
-     
+
         public double Ymin { get; private set; }
         public double Ymax { get; private set; }
         public double Xmax { get; private set; }
         public double Xmin { get; private set; }
-        
+
         public double GetArea()
         {
             return Sida * Sida;
@@ -32,22 +32,22 @@ namespace Projektarbete_grupp_17
             Ymax = kordinaterFörEnFykant.y + (Sida / 2);
             Ymin = kordinaterFörEnFykant.y - (Sida / 2);
         }
-        public bool InnanFörFyrkant()
+        public bool InnanFörFyrkantKordinat1()
         {
 
-            if (fyrkanten.kordinater.x < Xmax)
+            if (fyrkanten.kordinater1.x < Xmax)
             {
                 return true;
             }
-            else if (fyrkanten.kordinater.x > Xmin)
+            else if (fyrkanten.kordinater1.x > Xmin)
             {
                 return true;
             }
-            else if (fyrkanten.kordinater.y < Ymax)
+            else if (fyrkanten.kordinater1.y < Ymax)
             {
                 return true;
             }
-            else if (fyrkanten.kordinater.y > Ymin)
+            else if (fyrkanten.kordinater1.y > Ymin)
             {
                 return true;
             }
@@ -56,5 +56,30 @@ namespace Projektarbete_grupp_17
                 return false;
             }
         }
+        public bool InnanFörFyrkantKordinat2()
+        {
+
+            if (fyrkanten.kordinater2.x < Xmax)
+            {
+                return true;
+            }
+            else if (fyrkanten.kordinater2.x > Xmin)
+            {
+                return true;
+            }
+            else if (fyrkanten.kordinater2.y < Ymax)
+            {
+                return true;
+            }
+            else if (fyrkanten.kordinater2.y > Ymin)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }
