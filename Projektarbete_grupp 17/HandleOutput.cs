@@ -39,6 +39,10 @@ namespace Projektarbete_grupp_17
 
 
         }
+        public HandleOutput(HandleInput2 a)
+        {
+
+        }
 
         public void FormenÄrFyrkant()
         {
@@ -47,7 +51,8 @@ namespace Projektarbete_grupp_17
                 X = argument2.x1;
                 Y = argument2.y1;
                 perimeter = argument2.perimeter1;
-                //shapeScore = argument3.score1;
+        
+                // shapeScore = argument3.score1;
                 OutPut1Fyrkant();
 
             }
@@ -94,7 +99,7 @@ namespace Projektarbete_grupp_17
                 return (long)(fyrkanten.GetArea() * shapeScore) / 4;
             }
         }
-        public long OutPut1Cirkel()
+        /*public long OutPut1Cirkel()
         {
             Cirkel cirkeln = new Cirkel(20);
             if (cirkeln.IsInside("fixa senare"))
@@ -106,7 +111,7 @@ namespace Projektarbete_grupp_17
                 return cirkeln.GetArea() * pointScore * "shapeScore";
             }
 
-        }
+        }*/
         
 
 

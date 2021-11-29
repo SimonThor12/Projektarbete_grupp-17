@@ -10,10 +10,10 @@ namespace Projektarbete_grupp_17
     {
         public string[] arg3Array;
 
-        string form1;
-        string form2;
-        string form3;
-        string form4;
+        public string form1;
+        public string form2;
+        public string form3;
+        public string form4;
 
         public int score1;
         public int score2;

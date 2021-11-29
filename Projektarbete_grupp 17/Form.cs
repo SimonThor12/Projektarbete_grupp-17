@@ -8,7 +8,7 @@ namespace Projektarbete_grupp_17
 {
     abstract class Form
     { 
-        double GetArea();
+        //double GetArea();
 
 
         public void IsInside ()
