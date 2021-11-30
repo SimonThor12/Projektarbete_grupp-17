@@ -14,15 +14,15 @@ namespace Projektarbete_grupp_17
         public string form3;
         public string form4;
 
-        public int x1;
-        public int x2;
-        public int x3;
-        public int x4;
+        private int x1;
+        private int x2;
+        private int x3;
+        private int x4;
 
-        public int y1;
-        public int y2;
-        public int y3;
-        public int y4;
+        private int y1;
+        private int y2;
+        private int y3;
+        private int y4;
 
         public int perimeter1;
         public int perimeter2;

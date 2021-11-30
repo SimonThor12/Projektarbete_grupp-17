@@ -31,10 +31,10 @@ namespace Projektarbete_grupp_17
             punktKoordinat1 = input1.punkt1;
             punktKoordinat2 = input1.punkt2;
 
-            koordinatForm1 = new Koordinat(input2.x1, input2.y1);
-            koordinatForm2 = new Koordinat(input2.x2, input2.y2);
-            koordinatForm3 = new Koordinat(input2.x3, input2.y3);
-            koordinatForm4 = new Koordinat(input2.x4, input2.y4);
+            koordinatForm1 = input2.form1Koordinater;
+            koordinatForm2 = input2.form2Koordinater;
+            koordinatForm3 = input2.form3Koordinater;
+            koordinatForm4 = input2.form4Koordinater;
         }
 
         public void OutPut1()
