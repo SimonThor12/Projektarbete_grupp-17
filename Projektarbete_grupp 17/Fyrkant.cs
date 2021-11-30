@@ -12,7 +12,7 @@ namespace Projektarbete_grupp_17
         public double Omkrets { get; private set; }
 
         public Koordinat kordinaterFörEnFykant;
-        public HandleOutput fyrkanten;
+        
 
         public double Ymin { get; private set; }
         public double Ymax { get; private set; }

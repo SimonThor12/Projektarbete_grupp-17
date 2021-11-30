@@ -10,7 +10,6 @@ namespace Projektarbete_grupp_17
     {
         public double Radie { get; private set; }
         public Koordinat koordinat { get; private set; }
-
         public void IsInside ()
         {
 

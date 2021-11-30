@@ -24,9 +24,7 @@ namespace Projektarbete_grupp_17
         public Koordinat koordinatForm2;
         public Koordinat koordinatForm3;
         public Koordinat koordinatForm4;
-        public HandleInput2 argument2;
-        public HandleInput1 argument1;
-        public HandleInput3 argument3;
+      
         
         public HandleOutput (HandleInput1 input1, HandleInput2 input2, HandleInput3 input3)
         {
@@ -41,13 +39,13 @@ namespace Projektarbete_grupp_17
 
         public void OutPut1()
         {
-            kordinatSiffra1 = argument1.x1;
-            kordinatSiffra2 = argument1.y1;
-            kordinatSiffra3 = argument1.x2;
-            kordinatSiffra4 = argument1.y2;
+            //kordinatSiffra1 = argument1.x1;
+            //kordinatSiffra2 = argument1.y1;
+            //kordinatSiffra3 = argument1.x2;
+            //kordinatSiffra4 = argument1.y2;
 
-            pointScore1 = argument1.s1;
-            pointScore2 = argument1.s2;
+            //pointScore1 = argument1.s1;
+            //pointScore2 = argument1.s2;
             //kordinater1 = new Koordinat(kordinatSiffra1, kordinatSiffra2);
             //kordinater2 = new Koordinat(kordinatSiffra3, kordinatSiffra4);
 

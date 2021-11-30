@@ -21,17 +21,6 @@ namespace Projektarbete_grupp_17
         {
             arg1Array = arg1.Split(";");
 
-            if (arg1.ToArray().Length == 1 && arg1.Contains(";"))
-            {
-
-            }
-            else
-            {
-                Console.WriteLine("Your input for the points is incorrect.\n" +
-                    " It should follow this format: X, Y, SCORE." +
-                    " Each point should also be separated with a ‘;’");
-            }
-
             if (arg1Array.Length == 1)
             {
                 string punkt1 = arg1Array[0].Trim();
@@ -39,9 +28,11 @@ namespace Projektarbete_grupp_17
                 string[] punkt1Values = punkt1.Split(",");
 
                 //Felhantering
-                if (punkt1Values.Length<3 || punkt1Values.Length>3)
+                if (punkt1Values.Length!=3)
                 {
-
+                    Console.WriteLine("Your input for the points is incorrect.\n" +
+                    " It should follow this format: X, Y, SCORE." +
+                    " Each point should also be separated with a ‘;’");
                 }
 
                         //Värden för punkt 1
@@ -57,6 +48,14 @@ namespace Projektarbete_grupp_17
                 string[] punkt1Values = punkt1.Split(",");
                 string[] punkt2Values = punkt2.Split(",");
 
+                //Felhantering
+                if (punkt1Values.Length!=3 || punkt2Values.Length!=3)
+                {
+                    Console.WriteLine("Your input for the points is incorrect.\n" +
+                    " It should follow this format: X, Y, SCORE." +
+                    " Each point should also be separated with a ‘;’");
+                }
+                
                         //Värden för punkt 1
                         x1 = Convert.ToInt32(punkt1Values[0]);
                         y1 = Convert.ToInt32(punkt1Values[1]);
