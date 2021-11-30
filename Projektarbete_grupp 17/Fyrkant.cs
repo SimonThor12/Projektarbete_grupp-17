@@ -32,18 +32,18 @@ namespace Projektarbete_grupp_17
             Ymax = kordinaterFörEnFykant.y + (Sida / 2);
             Ymin = kordinaterFörEnFykant.y - (Sida / 2);
         }
-        //public bool InnanFörFyrkantKordinat1()
-        //{
+        public bool InnanFörFyrkantKordinat1(Koordinat punkt)
+        {
 
-        //    if (fyrkanten.kordinater1.x < Xmax && fyrkanten.kordinater1.x > Xmin && fyrkanten.kordinater1.y < Ymax && fyrkanten.kordinater1.y > Ymin)
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+            if (punkt.x < Xmax && punkt.x > Xmin && punkt.y < Ymax && punkt.y > Ymin)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         //public bool InnanFörFyrkantKordinat2()
         //{
 
