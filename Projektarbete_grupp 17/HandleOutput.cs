@@ -28,8 +28,8 @@ namespace Projektarbete_grupp_17
         
         public HandleOutput (HandleInput1 input1, HandleInput2 input2, HandleInput3 input3)
         {
-            punktKoordinat1 = new Koordinat(input1.x1, input1.y1);
-            punktKoordinat2 = new Koordinat(input1.x2, input1.y2);
+            punktKoordinat1 = input1.punkt1;
+            punktKoordinat2 = input1.punkt2;
 
             koordinatForm1 = new Koordinat(input2.x1, input2.y1);
             koordinatForm2 = new Koordinat(input2.x2, input2.y2);

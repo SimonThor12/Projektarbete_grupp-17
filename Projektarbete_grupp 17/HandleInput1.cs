@@ -10,12 +10,14 @@ namespace Projektarbete_grupp_17
     {
         public string[] arg1Array;
         
-        public int x1;
-        public int y1;
+        int x1;
+        int y1;
         public int s1;
-        public int x2;
-        public int y2;
+        int x2;
+        int y2;
         public int s2;
+        public Koordinat punkt1;
+        public Koordinat punkt2;
 
         public HandleInput1(string arg1)
         {
@@ -39,6 +41,9 @@ namespace Projektarbete_grupp_17
                          x1 = Convert.ToInt32(punkt1Values[0]);
                          y1 = Convert.ToInt32(punkt1Values[1]);
                          s1 = Convert.ToInt32(punkt1Values[2]);
+
+                         this.punkt1 = new Koordinat(x1, y1);
+
             }
             else if (arg1Array.Length == 2)
             {
@@ -57,29 +62,33 @@ namespace Projektarbete_grupp_17
                 }
                 
                         //Värden för punkt 1
-                        x1 = Convert.ToInt32(punkt1Values[0]);
-                        y1 = Convert.ToInt32(punkt1Values[1]);
-                        s1 = Convert.ToInt32(punkt1Values[2]);
-                
+                x1 = Convert.ToInt32(punkt1Values[0]);
+                y1 = Convert.ToInt32(punkt1Values[1]);
+                s1 = Convert.ToInt32(punkt1Values[2]);
 
-                        //Värden för punkt 2
-                        x2 = Convert.ToInt32(punkt2Values[0]);
-                        y2 = Convert.ToInt32(punkt2Values[1]);
-                        s2 = Convert.ToInt32(punkt2Values[2]);
-                }
+                this.punkt1 = new Koordinat(x1, y1);
+
+                //Värden för punkt 2
+                x2 = Convert.ToInt32(punkt2Values[0]);
+                y2 = Convert.ToInt32(punkt2Values[1]);
+                s2 = Convert.ToInt32(punkt2Values[2]);
+
+                this.punkt2 = new Koordinat(x2, y2);
 
             }
 
-
         }
 
-        
 
-        
-
-        
-        
     }
+
+        
+
+        
+
+        
+        
+}
         
     
 

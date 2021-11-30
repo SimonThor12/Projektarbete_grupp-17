@@ -45,11 +45,11 @@ namespace Projektarbete_grupp_17
             return 2*Radie * Math.PI;
         }
 
-        public bool IsInside (Koordinat punkt, Koordinat mittpunkt)
+        public bool IsInside (Koordinat punkt)
         {
-            double x1 = mittpunkt.x;
+            double x1 = koordinater.x;
             double x2 = punkt.x;
-            double y1 = mittpunkt.y;
+            double y1 = koordinater.y;
             double y2 = punkt.y;
             double disttopunkt = Math.Sqrt(Math.Pow(x2 - x1,2) + Math.Pow(y2 - y1,2));
             if (disttopunkt<Radie)

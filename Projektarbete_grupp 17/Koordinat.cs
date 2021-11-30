@@ -13,7 +13,7 @@ namespace Projektarbete_grupp_17
 
         public Koordinat (int inputx, int inputy)
         {
-            y= inputy;
+            y = inputy;
             x = inputx;
         }
 
