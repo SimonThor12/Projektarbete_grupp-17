@@ -8,6 +8,7 @@ namespace Projektarbete_grupp_17
 {
     class Oktagon : Polygon
     {
+        
         public int sidAntal { get; private set; }
         public int sidLängd { get; private set; }
 
@@ -15,5 +16,6 @@ namespace Projektarbete_grupp_17
         {
 
         }
+        
     }
 }
