@@ -52,10 +52,7 @@ namespace Projektarbete_grupp_17
 
 
         }
-        public HandleOutput(HandleInput2 a)
-        {
 
-        }
 
         //public void FormenÄrFyrkant()
         //{
