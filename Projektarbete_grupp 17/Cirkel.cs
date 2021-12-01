@@ -11,7 +11,8 @@ namespace Projektarbete_grupp_17
         public Koordinat koordinater {get; private set; }
 
 
-        public Cirkel (HandleInput2 input)
+        public Cirkel (string form, int x,int y, int omkrets)
+
         {
            // Radie = perimeter / (2 * Math.PI);
             
