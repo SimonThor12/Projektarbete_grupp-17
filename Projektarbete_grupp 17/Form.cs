@@ -6,19 +6,23 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class Form
+    abstract class Form
     {
-        HandleInput2 former;
+        HandleInput2 formListaInput;
         public double Radie { get; private set; }
         public Koordinat koordinat { get; private set; }
-        public Cirkel cirkel { get; private set; }
-        public Fyrkant fyrkant { get; private set; }
+
+        string namn;
+        
         public int shapeScore { get; private set; }
-        public Form (string form, int x, int y, int omkrets, int shapeScore)
+        public Form (string form, Koordinat _koordinat, int omkrets, int shapeScore)
         {
-            
+            koordinat = _koordinat;
         }
-        public void IsInside ()
+
+
+        
+        public virtual bool IsInside (Koordinat punkt)
         {
 
         }

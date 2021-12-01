@@ -11,28 +11,30 @@ namespace Projektarbete_grupp_17
         
         public string[] arg2Array;
 
-        public HandleInput3 scores;
+        
         int x;
         int y;
 
         int omkrets;
-        string form;
-        public List<Form> formLista;
+        string formtyp;
+        List<Form> formLista = new List<Form>();
         int shapeScore;
 
         //Tar in "Circle,x,y,perimeter  ;  triangle,x,y,perimeter;"
         
-        public HandleInput2 (string arg2, HandleInput3 Scores)
+        public HandleInput2 (string arg2, HandleInput3 shapeShoreInput)
 
         {
-            scores = Scores;
+            Form nyForm;
+            List<ShapeScore> shapeScores = shapeShoreInput.GetShapeScore();
 
             arg2Array = arg2.Split(";");
+            Koordinat koordinat;
 
             for (int i = 0; i < arg2Array.Length; i++)
             {
-                form = arg2Array[i].Trim();
-                string [] formVärden = form.Split(",");
+                formtyp = arg2Array[i].Trim();
+                string [] formVärden = formtyp.Split(",");
 
                 if (formVärden.Length!=4)
                 {
@@ -42,25 +44,52 @@ namespace Projektarbete_grupp_17
                 }
                 else
                 {
-                    form = formVärden[0];
+                    formtyp = formVärden[0];
                     x = Convert.ToInt32(formVärden[1]);
                     y = Convert.ToInt32(formVärden[2]);
                     omkrets = Convert.ToInt32(formVärden[3]);
-
-                    for (int j = 0; j < scores.shapeScores.Count; j++)
+                    koordinat = new Koordinat(x, y);
+                    for (int j = 0; j < shapeScores.Count; j++)
                     {
-                        if (form == scores.shapeScores[0].form)
+                        if (formtyp == shapeScores[0].form)
                         {
-                            shapeScore = scores.shapeScores[j].score;
+                            shapeScore = shapeScores[j].score;
                         }
                         
                     }
-                    
-                    formLista[i] = new Form(form, x, y, omkrets, shapeScore);
+                    switch (formtyp)
+                    {
+                        case "CIRCLE":
+
+                            nyForm = new Cirkel(formtyp, koordinat, omkrets);
+                            formLista.Add(nyForm);
+
+
+                            break;
+                        case "SQUARE":
+
+                            nyForm = new Fyrkant(formtyp, koordinat, omkrets);
+                            formLista.Add(nyForm);
+
+
+                            break;
+                        case "TRIANGLE":
+
+                            nyForm = new Triangel(formtyp, koordinat, omkrets);
+                            formLista.Add(nyForm);
+
+
+                            break;
+                    }
                 }
             }
         }
-       
-        
+
+        public List<Form> GetFormLista()
+        {
+            return formLista;
+        }
+
+
     }
 }

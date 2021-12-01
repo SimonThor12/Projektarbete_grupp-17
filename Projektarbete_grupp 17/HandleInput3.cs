@@ -14,7 +14,7 @@ namespace Projektarbete_grupp_17
         int score;
 
         string shapeScore;
-        public List<ShapeScore> shapeScores;
+        public List<ShapeScore> shapeScores = new List<ShapeScore>();
         public HandleInput3(string arg3)
         {
             arg3Array = arg3.Split(";");
@@ -35,12 +35,16 @@ namespace Projektarbete_grupp_17
                     form = shapeScoreVärden[0];
                     score = Convert.ToInt32(shapeScoreVärden[1]);
 
-                    shapeScores[i] = new ShapeScore(form, score);
+                    shapeScores.Add(new ShapeScore(form, score));
                 }
             }
-               
 
-            }
-            
+        }
+
+        public List<ShapeScore> GetShapeScore()
+        {
+            return shapeScores;
+        }
+
     }
 }

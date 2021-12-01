@@ -15,7 +15,7 @@ namespace Projektarbete_grupp_17
         int y;
         int s;
      
-        public List<Koordinat> punktLista;
+        List<Koordinat> punktLista = new List<Koordinat>();
 
         public HandleInput1(string arg1)
         {
@@ -37,13 +37,18 @@ namespace Projektarbete_grupp_17
                     y = Convert.ToInt32(punktVärden[1]);
                     s = Convert.ToInt32(punktVärden[2]);
 
-                    punktLista[i] = new Koordinat(x, y, s);
+                    punktLista.Add(new Koordinat(x, y, s));
                 }
             }
 
             
             
 
+        }
+
+        public List<Koordinat> GetPoints ()
+        {
+            return punktLista;
         }
 
 

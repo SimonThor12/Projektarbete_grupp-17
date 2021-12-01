@@ -8,6 +8,20 @@ namespace Projektarbete_grupp_17
 {
     class HämtalTotalPoäng
     {
+        long totalScore;
+
+        public HämtalTotalPoäng (Form former, Punkt punkt)
+        {
+            totalScore = KalkTotalPoäng(former, punkt);
+        }
+
+        public long KalkTotalPoäng (Form former, Punkt punkt)
+        {
+            foreach (form in former)
+            {
+
+            }
+        }
         public long OutPut1Cirkel(Form formen, Koordinat punkten)
         {
             if (formen.cirkel.IsInside(punkten))

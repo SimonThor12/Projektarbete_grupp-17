@@ -8,10 +8,8 @@ namespace Projektarbete_grupp_17
 {
     class Cirkel : Form
     {
-        public Koordinat koordinater {get; private set; }
 
-
-        public Cirkel(string form, int x, int y, int omkrets) : base (form,x,y,omkrets, 5)
+        public Cirkel(string form, Koordinat koordinat, int omkrets) : base (form, koordinat, omkrets, )
 
         {
             // Radie = perimeter / (2 * Math.PI);
@@ -31,7 +29,7 @@ namespace Projektarbete_grupp_17
             return 2*Radie * Math.PI;
         }
 
-        public bool IsInside (Koordinat punkt)
+        public override bool IsInside (Koordinat punkt)
         {
             double x1 = koordinater.x;
             double x2 = punkt.x;
