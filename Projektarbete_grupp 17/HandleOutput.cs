@@ -26,7 +26,7 @@ namespace Projektarbete_grupp_17
         public Koordinat koordinatForm4;
       
         
-        public HandleOutput (HandleInput1 input1, HandleInput2 input2, HandleInput3 input3)
+       /* public HandleOutput (HandleInput1 input1, HandleInput2 input2, HandleInput3 input3)
         {
             punktKoordinat1 = input1.punkt1;
             punktKoordinat2 = input1.punkt2;
@@ -35,7 +35,7 @@ namespace Projektarbete_grupp_17
             koordinatForm2 = input2.form2Koordinater;
             koordinatForm3 = input2.form3Koordinater;
             koordinatForm4 = input2.form4Koordinater;
-        }
+        }*/
 
         public void OutPut1()
         {
@@ -52,7 +52,7 @@ namespace Projektarbete_grupp_17
 
 
         }
-        public void 
+        
 
 
         //public void FormenÄrFyrkant()

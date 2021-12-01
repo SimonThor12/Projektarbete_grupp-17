@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    abstract class Polygon: Form
+    abstract class Polygon //: Form
     {
         public double antalsidor;
         public int perimeter { get; private set; }
@@ -19,7 +19,7 @@ namespace Projektarbete_grupp_17
 
         public double längdavsida { get; private set; }
 
-        public double angle = Math.PI * 2 / ;
+        public double angle = Math.PI * 2 / 2;
 
         
         public void GetKoordinaterFörHörn()
