@@ -9,57 +9,53 @@ namespace Projektarbete_grupp_17
     class HandleInput2
     {
         public string[] arg2Array;
-        public string form1;
-        public string form2;
-        public string form3;
-        public string form4;
 
-        public int x1;
-        public int x2;
-        public int x3;
-        public int x4;
+        int x;
+        int y;
 
-        public int y1;
-        public int y2;
-        public int y3;
-        public int y4;
-
-        public int perimeter1;
-        public int perimeter2;
-        public int perimeter3;
-        public int perimeter4;
-
-        string [] form1Values;
-        string[] form2Values;
-        string[] form3Values;
-        string[] form4Values;
-
-        public Koordinat form1Koordinater;
-        public Koordinat form2Koordinater;
-        public Koordinat form3Koordinater;
-        public Koordinat form4Koordinater;
-
-
-
+        int omkrets;
+        string form;
+        List<Form> former;
 
         //Tar in "Circle,x,y,perimeter  ;  triangle,x,y,perimeter;"
+
         public HandleInput2 (string arg2)
 
         {
             arg2Array = arg2.Split(";");
-          
+
+            for (int i = 0; i < arg2Array.Length; i++)
+            {
+                form = arg2Array[i].Trim();
+                string [] formVärden = form.Split(",");
+
+                if (formVärden.Length!=4)
+                {
+                    Console.WriteLine("Your input for the points is incorrect.\n" +
+                  " It should follow this format: X, Y, SCORE." +
+                  " Each point should also be separated with a ‘;’");
+                }
+                else
+                {
+
+                    form = formVärden[0];
+                    x = Convert.ToInt32(formVärden[1]);
+                    y = Convert.ToInt32(formVärden[2]);
+                    omkrets = Convert.ToInt32(formVärden[3]);
+
+
+                    former[i] = new Form(form, x, y, omkrets);
+
+                    
+                }
+            }
 
             switch (arg2Array.Length)
             {
                 case 1:
 
-                    string form1trim = arg2Array[0].Trim();
-                    form1Values = form1trim.Split(",");
                     
-                    form1 = form1Values[0];
-                    x1 = Convert.ToInt32(form1Values[1]);
-                    y1 = Convert.ToInt32(form1Values[2]);
-                    perimeter1 = Convert.ToInt32(form1Values[3]);
+                  
 
                     this.form1Koordinater = new Koordinat(x1, y1);
 

@@ -17,19 +17,17 @@ namespace Projektarbete_grupp_17
         int x2;
         int y2;
         public int s2;
-        public Koordinat punkt1;
-        public Koordinat punkt2;
+        List<Koordinat> punktArray;
+
         public HandleInput1(string arg1)
         {
             arg1Array = arg1.Split(";");
 
-            List<Koordinat> PointArray = new List<Koordinat>();
-
             for (int i = 0; i < arg1Array.Length; i++)
             {
                 punkt = arg1Array[i].Trim();
-                string[] pointValues = punkt.Split(",");
-                if (pointValues.Length != 3)
+                string[] punktVärden = punkt.Split(",");
+                if (punktVärden.Length != 3)
                 {
                     Console.WriteLine("Your input for the points is incorrect.\n" +
                     " It should follow this format: X, Y, SCORE." +
@@ -37,11 +35,11 @@ namespace Projektarbete_grupp_17
                 }
                 else
                 {
-                    x1 = Convert.ToInt32(pointValues[0]);
-                    y1 = Convert.ToInt32(pointValues[1]);
-                    s1 = Convert.ToInt32(pointValues[2]);
+                    x1 = Convert.ToInt32(punktVärden[0]);
+                    y1 = Convert.ToInt32(punktVärden[1]);
+                    s1 = Convert.ToInt32(punktVärden[2]);
 
-                    PointArray[i] = new Koordinat(x1, y1);
+                    punktArray[i] = new Koordinat(x1, y1);
                 }
                
 
