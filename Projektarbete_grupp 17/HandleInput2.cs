@@ -11,19 +11,22 @@ namespace Projektarbete_grupp_17
         
         public string[] arg2Array;
 
+        HandleInput3 scores;
         int x;
         int y;
 
         int omkrets;
         string form;
-        List<Form> formLista;
+        public List<Form> formLista;
+        int shapeScore;
 
         //Tar in "Circle,x,y,perimeter  ;  triangle,x,y,perimeter;"
         
-        public HandleInput2 (string arg2)
-
+        public HandleInput2 (string arg2, HandleInput3 Scores)
 
         {
+            scores = Scores;
+
             arg2Array = arg2.Split(";");
 
             for (int i = 0; i < arg2Array.Length; i++)
@@ -44,13 +47,17 @@ namespace Projektarbete_grupp_17
                     y = Convert.ToInt32(formVärden[2]);
                     omkrets = Convert.ToInt32(formVärden[3]);
 
-
-                    if (form == "CIRCLE" && input3. == "CIRCLE")
+                    for (int j = 0; j < scores.shapeScores.Count; j++)
                     {
+                        if (form == scores.shapeScores[0].form)
+                        {
+                            shapeScore = scores.shapeScores[j].score;
+                        }
                         
                     }
+                    
 
-                    formLista[i] = new Form(form, x, y, omkrets);
+                    formLista[i] = new Form(form, x, y, omkrets, shapeScore);
                 }
             }
         }

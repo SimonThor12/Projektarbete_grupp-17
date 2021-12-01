@@ -14,7 +14,7 @@ namespace Projektarbete_grupp_17
         int score;
 
         string shapeScore;
-        List<ShapeScore> shapeScores;
+        public List<ShapeScore> shapeScores;
         public HandleInput3(string arg3)
         {
             arg3Array = arg3.Split(";");

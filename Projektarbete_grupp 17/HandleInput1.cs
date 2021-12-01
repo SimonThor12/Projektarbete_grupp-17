@@ -17,7 +17,7 @@ namespace Projektarbete_grupp_17
         int x2;
         int y2;
         public int s2;
-        List<Koordinat> punktLista;
+        public List<Koordinat> punktLista;
 
         public HandleInput1(string arg1)
         {
