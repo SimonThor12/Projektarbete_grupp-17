@@ -8,8 +8,8 @@ namespace Projektarbete_grupp_17
 {
     class ShapeScore
     {
-        string form;
-        int score;
+        public string form;
+        public int score;
 
         public ShapeScore (string Form, int Score)
         {

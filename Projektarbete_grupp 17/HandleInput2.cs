@@ -8,7 +8,7 @@ namespace Projektarbete_grupp_17
 {
     class HandleInput2
     {
-        HandleInput3 ShapeScore;
+        
         public string[] arg2Array;
 
         int x;
@@ -19,8 +19,9 @@ namespace Projektarbete_grupp_17
         List<Form> formLista;
 
         //Tar in "Circle,x,y,perimeter  ;  triangle,x,y,perimeter;"
-
+        
         public HandleInput2 (string arg2)
+
 
         {
             arg2Array = arg2.Split(";");
@@ -42,7 +43,9 @@ namespace Projektarbete_grupp_17
                     x = Convert.ToInt32(formVärden[1]);
                     y = Convert.ToInt32(formVärden[2]);
                     omkrets = Convert.ToInt32(formVärden[3]);
-                    if (form == "CIRCLE" && ShapeScore.form=="CIRCLE")
+
+
+                    if (form == "CIRCLE" && input3. == "CIRCLE")
                     {
                         
                     }
