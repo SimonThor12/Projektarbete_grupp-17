@@ -11,7 +11,7 @@ namespace Projektarbete_grupp_17
         
         public string[] arg2Array;
 
-        HandleInput3 scores;
+        public HandleInput3 scores;
         int x;
         int y;
 

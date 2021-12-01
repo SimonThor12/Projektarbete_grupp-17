@@ -16,13 +16,6 @@ namespace Projektarbete_grupp_17
         public int shapeScore { get; private set; }
         public Form (string form, int x, int y, int omkrets, int shapeScore)
         {
-            for (int i = 0; i < former.formLista.Count; i++)
-            {
-                if (former.formLista[i].Om== "CIRCLE")
-                {
-                    shapeScore = former.formLista[0].shapeScore;
-                }
-            }
             
         }
         public void IsInside ()
