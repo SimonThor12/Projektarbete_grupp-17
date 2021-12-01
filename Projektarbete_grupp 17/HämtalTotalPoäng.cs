@@ -8,12 +8,17 @@ namespace Projektarbete_grupp_17
 {
     class HämtalTotalPoäng
     {
-        public long OutPut1Cirkel(Cirkel input, Koordinat punkten)
+        public long OutPut1Cirkel(Form formen, Koordinat punkten)
         {
-            if (input.IsInside(punkten))
+            if (formen.cirkel.IsInside(punkten))
             {
-                input.GetArea() * punkten.pointScore * 
+                return (long)formen.cirkel.GetArea() * punkten.pointScore * formen.shapeScore;
             }
+            else
+            {
+                return (long)(formen.cirkel.GetArea() * formen.shapeScore) / 4;
+            }
+            
         }
     }
 }

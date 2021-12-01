@@ -10,10 +10,16 @@ namespace Projektarbete_grupp_17
     {
         public double Radie { get; private set; }
         public Koordinat koordinat { get; private set; }
-
-        public Form (string form, int x, int y, int omkrets)
+        public Cirkel cirkel { get; private set; }
+        public int shapeScore { get; private set; }
+        public Form (string form, int x, int y, int omkrets, int shapeScore)
         {
+            if(form == "CIRCLE")
+            {
+                cirkel = new Cirkel("cirkel", x,y,omkrets);
+                this.shapeScore = shapeScore;
 
+            }
         }
         public void IsInside ()
         {
