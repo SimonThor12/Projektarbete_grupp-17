@@ -13,10 +13,10 @@ namespace Projektarbete_grupp_17
         string punkt;
         int x1;
         int y1;
-        public int s1;
+        int s1;
         int x2;
         int y2;
-        public int s2;
+        int s2;
         public List<Koordinat> punktLista;
 
         public HandleInput1(string arg1)
@@ -39,7 +39,7 @@ namespace Projektarbete_grupp_17
                     y1 = Convert.ToInt32(punktVärden[1]);
                     s1 = Convert.ToInt32(punktVärden[2]);
 
-                    punktLista[i] = new Koordinat(x1, y1);
+                    punktLista[i] = new Koordinat(x1, y1, s1);
                 }
             }
 

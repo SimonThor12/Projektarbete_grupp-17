@@ -11,31 +11,16 @@ namespace Projektarbete_grupp_17
         public Koordinat koordinater {get; private set; }
 
 
-        public Cirkel (string form, int x,int y, int omkrets)
+        public Cirkel(string form, int x, int y, int omkrets) : base (form,x,y,omkrets, )
 
         {
-           // Radie = perimeter / (2 * Math.PI);
-            
-            if(input.form1=="CIRCLE")
-            {
-                koordinater = new Koordinat(input.x1, input.y1);
-            }
-            if(input.form2 == "CIRCLE")
-            {
-                koordinater = new Koordinat(input.x2, input.y2);
-            }
-            if(input.form3 == "CIRCLE")
-            {
-                koordinater = new Koordinat(input.x3, input.y3);
-            }
-            if(input.form4 == "CIRCLE")
-            {
-                koordinater = new Koordinat(input.x4, input.y4);
-            }
+            // Radie = perimeter / (2 * Math.PI);
+
+
 
 
         }
-        
+
         public double GetArea()
         {
             return Radie * Radie * Math.PI;

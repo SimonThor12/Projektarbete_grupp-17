@@ -56,7 +56,6 @@ namespace Projektarbete_grupp_17
                         
                     }
                     
-
                     formLista[i] = new Form(form, x, y, omkrets, shapeScore);
                 }
             }
