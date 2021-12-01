@@ -37,7 +37,7 @@ namespace Projektarbete_grupp_17
                     y = Convert.ToInt32(punktVärden[1]);
                     s = Convert.ToInt32(punktVärden[2]);
 
-                    punktLista[i] = new Koordinat(x1, y1, s1);
+                    punktLista[i] = new Koordinat(x, y, s);
                 }
             }
 
