@@ -8,6 +8,7 @@ namespace Projektarbete_grupp_17
 {
     class Form
     {
+        HandleInput2 former;
         public double Radie { get; private set; }
         public Koordinat koordinat { get; private set; }
         public Cirkel cirkel { get; private set; }
@@ -15,16 +16,12 @@ namespace Projektarbete_grupp_17
         public int shapeScore { get; private set; }
         public Form (string form, int x, int y, int omkrets, int shapeScore)
         {
-            if(form == "CIRCLE")
+            for (int i = 0; i < former.formLista.Count; i++)
             {
-                cirkel = new Cirkel(form, x,y,omkrets);
-                this.shapeScore = shapeScore;
-
-            }
-            if(form == "SQUARE")
-            {
-                fyrkant = new Fyrkant(form, x, y, omkrets);
-                this.shapeScore = shapeScore;
+                if (former.formLista[i].Om== "CIRCLE")
+                {
+                    shapeScore = former.formLista[0].shapeScore;
+                }
             }
             
         }
