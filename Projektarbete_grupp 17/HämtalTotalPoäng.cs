@@ -20,5 +20,16 @@ namespace Projektarbete_grupp_17
             }
             
         }
+        public long OutPut1Fyrkant(Form formen, Koordinat punkten)
+        {
+            if (formen.fyrkant.InnanFörFyrkantKordinat(punkten))
+            {
+                return (long)formen.fyrkant.GetArea() * punkten.pointScore * formen.shapeScore;
+            }
+            else
+            {
+                return (long)(formen.fyrkant.GetArea() * formen.shapeScore) / 4;
+            }
+        }
     }
 }

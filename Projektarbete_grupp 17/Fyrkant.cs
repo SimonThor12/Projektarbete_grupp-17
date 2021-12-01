@@ -23,16 +23,16 @@ namespace Projektarbete_grupp_17
         {
             return Sida * Sida;
         }
-        public Fyrkant(int a, int b, double _omkrets)
+        public Fyrkant(string form, int x, int y, int omkrets)
         {
-            kordinaterFörEnFykant = new Koordinat(a, b);
-            Sida = _omkrets / 4;
+            kordinaterFörEnFykant = new Koordinat(x, y);
+            Sida = omkrets / 4;
             Xmax = kordinaterFörEnFykant.x + (Sida / 2);
             Xmin = kordinaterFörEnFykant.x - (Sida / 2);
             Ymax = kordinaterFörEnFykant.y + (Sida / 2);
             Ymin = kordinaterFörEnFykant.y - (Sida / 2);
         }
-        public bool InnanFörFyrkantKordinat1(Koordinat punkt)
+        public bool InnanFörFyrkantKordinat(Koordinat punkt)
         {
 
             if (punkt.x < Xmax && punkt.x > Xmin && punkt.y < Ymax && punkt.y > Ymin)
