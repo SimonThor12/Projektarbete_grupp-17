@@ -8,13 +8,13 @@ namespace Projektarbete_grupp_17
 {
     class ShapeScore
     {
-        ShapeScore Fyrkant = new ShapeScore();
-         
-       
+        string form;
+        int score;
 
-        public ShapeScore ()
+        public ShapeScore (string Form, int Score)
         {
-
+            form = Form;
+            score = Score; 
         }
 
         

@@ -10,105 +10,35 @@ namespace Projektarbete_grupp_17
     {
         public string[] arg3Array;
 
-        public string form1;
-        public string form2;
-        public string form3;
-        public string form4;
+        string form;
+        int score;
 
-        public int score1;
-        public int score2;
-        public int score3;
-        public int score4;
-
-        string[] ShapeScore1Values;
-        string[] shapeScore2Values;
-        string[] shapeScore3Values;
-        string[] shapeScore4Values;
-
+        string shapeScore;
+        List<ShapeScore> shapeScores;
         public HandleInput3(string arg3)
         {
             arg3Array = arg3.Split(";");
 
+            for (int i = 0; i < arg3Array.Length; i++)
+            {
+                shapeScore = arg3Array[i].Trim();
+                string [] shapeScoreVärden = shapeScore.Split(",");
 
-                switch (arg3Array.Length)
+                if (shapeScoreVärden.Length != 2)
                 {
-                    case 1:
-
-                        string shape1trim = arg3Array[0].Trim();
-                        ShapeScore1Values = shape1trim.Split(",");
-
-                        form1 = ShapeScore1Values[0];
-                        score1 = Convert.ToInt32(ShapeScore1Values[1]);
-
-                        break;
-
-                    case 2:
-
-                        shape1trim = arg3Array[0].Trim();
-                        ShapeScore1Values = shape1trim.Split(",");
-
-                        string shape2trim = arg3Array[1].Trim();
-                        shapeScore2Values = shape2trim.Split(",");
-
-                        form1 = ShapeScore1Values[0];
-                        score1 = Convert.ToInt32(ShapeScore1Values[1]);
-
-                        form2 = shapeScore2Values[0];
-                        score2 = Convert.ToInt32(shapeScore2Values[1]);
-
-                        break;
-
-                    case 3:
-
-                        shape1trim = arg3Array[0].Trim();
-                        ShapeScore1Values = shape1trim.Split(",");
-
-                        shape2trim = arg3Array[1].Trim();
-                        shapeScore2Values = shape2trim.Split(",");
-
-                        string shape3trim = arg3Array[2].Trim();
-                        shapeScore3Values = shape3trim.Split(",");
-
-                        form1 = ShapeScore1Values[0];
-                        score1 = Convert.ToInt32(ShapeScore1Values[1]);
-
-                        form2 = shapeScore2Values[0];
-                        score2 = Convert.ToInt32(shapeScore2Values[1]);
-
-                        form3 = shapeScore3Values[0];
-                        score3 = Convert.ToInt32(shapeScore3Values[1]);
-
-
-                        break;
-                    case 4:
-
-                        shape1trim = arg3Array[0].Trim();
-                        ShapeScore1Values = shape1trim.Split(",");
-
-                        shape2trim = arg3Array[1].Trim();
-                        shapeScore2Values = shape2trim.Split(",");
-
-                        shape3trim = arg3Array[2].Trim();
-                        shapeScore3Values = shape3trim.Split(",");
-
-                        string shape4trim = arg3Array[3].Trim();
-                        shapeScore4Values = shape4trim.Split(",");
-
-                        form1 = ShapeScore1Values[0];
-                        score1 = Convert.ToInt32(ShapeScore1Values[1]);
-
-                        form2 = shapeScore2Values[0];
-                        score2 = Convert.ToInt32(shapeScore2Values[1]);
-
-                        form3 = shapeScore3Values[0];
-                        score3 = Convert.ToInt32(shapeScore3Values[1]);
-
-                        form4 = shapeScore4Values[0];
-                        score4 = Convert.ToInt32(shapeScore4Values[1]);
-
-                        break;
-
+                    Console.WriteLine("Your input for the points is incorrect.\n" +
+                    " It should follow this format: X, Y, SCORE." +
+                    " Each point should also be separated with a ‘;’");
                 }
+                else
+                {
+                    form = shapeScoreVärden[0];
+                    score = Convert.ToInt32(shapeScoreVärden[1]);
+
+                    shapeScores[i] = new ShapeScore(form, score);
+                }
+            }
+               
 
             }
             
