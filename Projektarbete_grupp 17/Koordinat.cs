@@ -12,10 +12,11 @@ namespace Projektarbete_grupp_17
         public int x;
         public int pointScore;
 
-        public Koordinat (int inputx, int inputy)
+        public Koordinat (int inputx, int inputy, int taInPointScore)
         {
             y = inputy;
             x = inputx;
+            pointScore = taInPointScore;
         }
 
     }
