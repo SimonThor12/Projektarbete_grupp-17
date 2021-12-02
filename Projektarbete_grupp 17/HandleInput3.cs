@@ -36,7 +36,7 @@ namespace Projektarbete_grupp_17
                     form = shapeScoreVärden[0];
                     score = Convert.ToInt32(shapeScoreVärden[1]);
                     shapeScoresDictionary.Add(form, score);
-                    shapeScores.Add(new ShapeScore(form, score));
+                    //shapeScores.Add(new ShapeScore(form, score));
                 }
             }
 
