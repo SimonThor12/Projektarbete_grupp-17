@@ -60,7 +60,8 @@ namespace Projektarbete_grupp_17
                     {
                         case "CIRCLE":
 
-                            nyForm = new Cirkel(formtyp, koordinat, omkrets, shapeScore) ;
+                            antalKanter =
+                            nyForm = new Cirkel(formtyp, koordinat, omkrets, shapeScore, antalKanter) ;
                             formLista.Add(nyForm);
 
                             break;
@@ -71,12 +72,12 @@ namespace Projektarbete_grupp_17
                             formLista.Add(nyForm);
 
                             break;
-                        case "TRIANGLE":
+                        
 
                             nyForm = new Triangel(formtyp, koordinat, omkrets, shapeScore);
                             formLista.Add(nyForm);
                             break;
-
+                        case "TRIANGLE":
                         case "PENTAGON":
                         case "HEXAGON":
                         case "HEPTAGON":

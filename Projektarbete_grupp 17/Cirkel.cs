@@ -28,7 +28,7 @@ namespace Projektarbete_grupp_17
 
         public override bool IsInside (Koordinat punkt)
         {
-            double x1 = koordinater.x;
+            double x1 = mittpunkt.x;
             double x2 = punkt.x;
             double y1 = koordinater.y;
             double y2 = punkt.y;

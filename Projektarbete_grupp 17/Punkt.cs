@@ -14,7 +14,7 @@ namespace Projektarbete_grupp_17
 
         int pointScore;
 
-        public Punkt (HandleInput1 punktInputs)
+        public Punkt (Koordinat koordinat, int score)
         {
             koordinater = punktInputs.GetPunkter();
             pointScores = punktInputs.GetPointScores();
