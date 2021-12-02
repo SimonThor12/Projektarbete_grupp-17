@@ -8,12 +8,10 @@ namespace Projektarbete_grupp_17
 {
     class Polygon : Form
     {
-        public double antalsidor;
         public int perimeter { get; private set; }
 
         public double apothem { get; private set; }
 
-        
 
         private double offset;
 
