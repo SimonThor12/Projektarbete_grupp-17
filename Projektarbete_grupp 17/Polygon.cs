@@ -8,10 +8,12 @@ namespace Projektarbete_grupp_17
 {
     class Polygon : Form
     {
+        public double antalsidor;
         public int perimeter { get; private set; }
 
         public double apothem { get; private set; }
 
+        
 
         private double offset;
 
@@ -19,8 +21,8 @@ namespace Projektarbete_grupp_17
 
         public double angle = Math.PI * 2 / 2;
 
-        public Polygon (string formtyp, Koordinat _mittpunkt, int omkrets, int shapeScore, int antalsidor) 
-            : base(formtyp, _mittpunkt, omkrets, shapeScore, antalsidor)
+        public Polygon (string formtyp, Koordinat _mittpunkt, int omkrets, int shapeScore, int antalSidor) 
+            : base(formtyp, _mittpunkt, omkrets, shapeScore, antalSidor)
         {
             antalsidor = antalSidor;
             mittpunkt = _mittpunkt;
