@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class HandleInput3 : IHandler<>
+    class HandleInput3
     {
         public string[] arg3Array;
 
