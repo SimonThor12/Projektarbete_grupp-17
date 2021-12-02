@@ -11,9 +11,9 @@ namespace Projektarbete_grupp_17
         public double antalsidor;
         public int perimeter { get; private set; }
 
-        public double apothem { get; private set; }
+        List<Koordinat> vertices;
 
-        
+        public double apothem { get; private set; }
 
         private double offset;
 
@@ -24,6 +24,7 @@ namespace Projektarbete_grupp_17
         public Polygon (string formtyp, Koordinat _mittpunkt, int omkrets, int shapeScore, int antalSidor) 
             : base(formtyp, _mittpunkt, omkrets, shapeScore, antalSidor)
         {
+            perimeter = omkrets;
             antalsidor = antalSidor;
             mittpunkt = _mittpunkt;
         }
@@ -42,14 +43,32 @@ namespace Projektarbete_grupp_17
             {
                 double X = mittpunkt.x + GetApothem() * Math.Sin(i * angle + offset);
                 double Y = mittpunkt.y + GetApothem() * Math.Cos(i * angle + offset);
+                Koordinat nyaKoordinater = new Koordinat(X, Y);
+                vertices.Add(nyaKoordinater);
             }
         }
+        
+        public override bool IsInside (Koordinat punkt) 
+        {
+            double X = punkt.x;
+            double Y = punkt.y;
+            int j = vertices.Count - 1;
+            bool IS_HIT = false;
 
-//    FOR i = 0 i<ANTALET_SIDOR i++
-//    NY_XKOORDINAT = MITTPUNKTENS_XKOORDINAT + CIRCUMRADIUS* SIN(i* ANGLE + OFFSET));
-//    NY_YKOORDINAT = MITTPUNKTENS_YKOORDINAT + CIRCUMRADIUS* COS(i* ANGLE + OFFSET));
-//    LAGRA DE NYA KOORDINATERN
-
+            for (int i = 0; i < vertices.Count; i++)
+            {
+                if(vertices[i].y < Y && vertices[j].y <= Y || vertices[j].y < Y && vertices[i].y >= Y )
+                {
+                    if (vertices[i].x + (Y-vertices[i].y / (vertices[j].y - vertices[i].y) * (vertices[j].x - vertices[i].y)) < X ) 
+                    {
+                        IS_HIT = !IS_HIT;
+                    }
+                }
+                j = i;
+                
+            }
+            return IS_HIT;
+        }
         
         public double GetArea()
         {
