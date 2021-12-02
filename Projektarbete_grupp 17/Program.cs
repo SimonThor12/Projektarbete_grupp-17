@@ -11,8 +11,8 @@ namespace Projektarbete_grupp_17
             //HandleInput1 punkterInput = new HandleInput1("1,2, ; 3,5,7 ; 5,7,89");
             HandleInput3 ShapescoreInput = new HandleInput3("CIRCLE,100; TRIANGLE,500;");
             HandleInput2 FormerInput = new HandleInput2("CIRCLE,2,3,100", ShapescoreInput);
-            
-            //HandleAllInput input = new HandleAllInput(punktLista : IHandler<Punkt>, formLista : IHandler<Form>, shapeLista : IHandler<ShapeScore>);
+            HandleInput1 Input1 = new HandleInput1("1,2,3");
+            HandleAllInput input = new HandleAllInput(IHandler<HandleInput1>(Input1), formLista, ShapescoreInput);
             HämtalTotalPoäng TotalPoäng;
 
             //Koordinat kordinat = new Koordinat(3, 6);
