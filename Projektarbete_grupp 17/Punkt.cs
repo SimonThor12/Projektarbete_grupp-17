@@ -8,7 +8,16 @@ namespace Projektarbete_grupp_17
 {
     class Punkt
     {
+        List<Koordinat> koordinater;
         Koordinat koordinat;
-        Pointscore;
+        List<int> pointScores;
+
+        int pointScore;
+
+        public Punkt (HandleInput1 punktInputs)
+        {
+            koordinater = punktInputs.GetPunkter();
+            pointScores = punktInputs.GetPointScores();
+        }
     }
 }
