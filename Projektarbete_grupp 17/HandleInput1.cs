@@ -37,7 +37,7 @@ namespace Projektarbete_grupp_17
                     y = Convert.ToInt32(punktVärden[1]);
                     s = Convert.ToInt32(punktVärden[2]);
 
-                    //Notera att Koordinat och poäng för denna koordinat har samma index men för olika listor
+                    
                     punktLista.Add(new Punkt(new Koordinat(x,y), s));
 
                 }
