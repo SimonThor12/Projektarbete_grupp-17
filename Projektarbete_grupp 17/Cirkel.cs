@@ -10,7 +10,7 @@ namespace Projektarbete_grupp_17
     {
 
         public Cirkel(string form, Koordinat mittpunkt, int omkrets, int shapeScore) 
-            : base (form, mittpunkt, omkrets, shapeScore)
+            : base (form, mittpunkt, omkrets, shapeScore, 0)
 
         {
             // Radie = perimeter / (2 * Math.PI);
@@ -30,7 +30,7 @@ namespace Projektarbete_grupp_17
         {
             double x1 = mittpunkt.x;
             double x2 = punkt.x;
-            double y1 = koordinater.y;
+            double y1 = mittpunkt.y;
             double y2 = punkt.y;
             double disttopunkt = Math.Sqrt(Math.Pow(x2 - x1,2) + Math.Pow(y2 - y1,2));
             if (disttopunkt<Radie)

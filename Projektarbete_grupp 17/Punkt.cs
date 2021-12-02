@@ -8,16 +8,14 @@ namespace Projektarbete_grupp_17
 {
     class Punkt
     {
-        List<Koordinat> koordinater;
-        Koordinat koordinat;
-        List<int> pointScores;
+        public Koordinat koordinat { get; private set; }
 
-        int pointScore;
+        public int pointScore { get; private set; }
 
         public Punkt (Koordinat koordinat, int score)
         {
-            koordinater = punktInputs.GetPunkter();
-            pointScores = punktInputs.GetPointScores();
+            pointScore = score;
+            this.koordinat = koordinat;
         }
     }
 }
