@@ -15,13 +15,14 @@ namespace Projektarbete_grupp_17
             //totalScore = KalkTotalPoäng(former, punkt);
         }
 
-        //public long KalkTotalPoäng (Form former, Punkt punkt)
-        //{
-        //    foreach (form in former)
-        //    {
-                
-        //    }
-        //}
+        public long KalkTotalPoäng (Form former, Punkt punkt)
+        {
+            foreach (form in former)
+            {
+                if (Form.formtyp== "POLYGON")
+                Polygon.IsInside(punkt);
+            }
+        }
         //public long OutPut1Cirkel(Form formen, Koordinat punkten)
         //{
         //    if (formen.cirkel.IsInside(punkten))
@@ -32,7 +33,7 @@ namespace Projektarbete_grupp_17
         //    {
         //        return (long)(formen.cirkel.GetArea() * formen.shapeScore) / 4;
         //    }
-            
+
         //}
         //public long OutPut1Fyrkant(Form formen, Koordinat punkten)
         //{
