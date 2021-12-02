@@ -14,7 +14,7 @@ namespace Projektarbete_grupp_17
         int score;
 
         string shapeScore;
-        public List<ShapeScore> shapeScores = new List<ShapeScore>();
+        //public List<ShapeScore> shapeScores = new List<ShapeScore>();
         public Dictionary<string, int> shapeScoresDictionary = new Dictionary<string, int>();
         public HandleInput3(string arg3)
         {

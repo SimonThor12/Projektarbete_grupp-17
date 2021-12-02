@@ -7,10 +7,16 @@ using System.Threading.Tasks;
 namespace Projektarbete_grupp_17
 {
     class HandleAllInput
-    {
-        public HandleAllInput(IHandler<Punkt> punktLista, IHandler<Form> formLista, HandleInput3 shapeScores)
-        {
 
+    {
+        IHandler<Punkt> punktLista;
+        IHandler<Form> formLista;
+        HandleInput3 shapeScore;
+        public HandleAllInput(IHandler<Punkt> punktLista, IHandler<Form> formLista, HandleInput3 shapeScore)
+        {
+            this.punktLista = punktLista;
+            this.formLista = formLista;
+            this.shapeScore = shapeScore;
         }
     }
 }
