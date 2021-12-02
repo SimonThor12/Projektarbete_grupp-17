@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class HandleInput2
+    class HandleInput2 : IHandler<Form>
     {
         
         public string[] arg2Array;
@@ -112,20 +112,17 @@ namespace Projektarbete_grupp_17
                             nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore, antalKanter);
                             formLista.Add(nyForm);
 
-
-
-
                             break;
                     }
                 }
             }
         }
 
-        public List<Form> GetFormLista()
+       
+
+        public List<Form> HandleInput()
         {
             return formLista;
         }
-
-
     }
 }

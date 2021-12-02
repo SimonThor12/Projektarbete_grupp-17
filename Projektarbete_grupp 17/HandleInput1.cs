@@ -50,7 +50,7 @@ namespace Projektarbete_grupp_17
 
         public List<Punkt> HandleInput()
         {
-            throw new NotImplementedException();
+            return punktLista; 
         }
     }
 

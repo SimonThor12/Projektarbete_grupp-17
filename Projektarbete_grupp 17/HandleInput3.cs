@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class HandleInput3
+    class HandleInput3 : IHandler<ShapeScore>
     {
         public string[] arg3Array;
 
@@ -41,10 +41,9 @@ namespace Projektarbete_grupp_17
 
         }
 
-        public List<ShapeScore> GetShapeScore()
+        public List<ShapeScore> HandleInput()
         {
             return shapeScores;
         }
-
     }
 }
