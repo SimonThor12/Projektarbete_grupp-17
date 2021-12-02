@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class HandleInput1
+    class HandleInput1: IHandler<Punkt>
     {
         public string[] arg1Array;
 
@@ -48,16 +48,10 @@ namespace Projektarbete_grupp_17
 
         }
 
-        public List<Koordinat> GetPunkter ()
+        public List<Punkt> HandleInput()
         {
-            return punktLista;
+            throw new NotImplementedException();
         }
-
-        public List<int> GetPointScores()
-        {
-            return pointScores;
-        }
-
     }
 
         

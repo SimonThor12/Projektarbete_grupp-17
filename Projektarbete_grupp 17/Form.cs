@@ -10,13 +10,14 @@ namespace Projektarbete_grupp_17
     {
         
         public double Radie { get; private set; }
-        Koordinat mittpunkt { get; set; }
+        protected Koordinat mittpunkt { get; set; }
 
-        string namn;
+        protected string formtyp { get; set; }
         
         public int shapeScore { get; private set; }
-        public Form (string form, Koordinat _koordinat, int omkrets, int shapeScore)
+        public Form (string formtyp, Koordinat _koordinat, int omkrets, int shapeScore, int antalSidor)
         {
+            this.formtyp = formtyp;
             mittpunkt = _koordinat;
         }
 

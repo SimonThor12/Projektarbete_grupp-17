@@ -13,7 +13,7 @@ namespace Projektarbete_grupp_17
 
         public double apothem { get; private set; }
 
-        Koordinat mittpunkt;
+        
 
         private double offset;
 
@@ -21,7 +21,8 @@ namespace Projektarbete_grupp_17
 
         public double angle = Math.PI * 2 / 2;
 
-        public Polygon (string formtyp, Koordinat _mittpunkt, int omkrets, int shapeScore) : base(formtyp, _mittpunkt, omkrets, shapeScore)
+        public Polygon (string formtyp, Koordinat _mittpunkt, int omkrets, int shapeScore, int antalSidor) 
+            : base(formtyp, _mittpunkt, omkrets, shapeScore, antalSidor)
         {
             mittpunkt = _mittpunkt;
         }

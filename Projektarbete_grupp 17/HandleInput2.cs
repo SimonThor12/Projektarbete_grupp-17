@@ -60,31 +60,59 @@ namespace Projektarbete_grupp_17
                     {
                         case "CIRCLE":
 
-                            antalKanter =
-                            nyForm = new Cirkel(formtyp, koordinat, omkrets, shapeScore, antalKanter) ;
+                            nyForm = new Cirkel(formtyp, koordinat, omkrets, shapeScore) ;
                             formLista.Add(nyForm);
 
                             break;
 
                         case "SQUARE":
 
+                            
                             nyForm = new Fyrkant(formtyp, koordinat, omkrets, shapeScore);
                             formLista.Add(nyForm);
-
-                            break;
-                        
-
-                            nyForm = new Triangel(formtyp, koordinat, omkrets, shapeScore);
-                            formLista.Add(nyForm);
+                           
                             break;
                         case "TRIANGLE":
+                            int antalKanter = 3;
+                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore, antalKanter);
+                            formLista.Add(nyForm);
+
+                            break;
                         case "PENTAGON":
+
+                            antalKanter = 5;
+
+                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore, antalKanter);
+                            formLista.Add(nyForm);
+
+                            break;
+
                         case "HEXAGON":
+                            antalKanter = 6;
+
+                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore, antalKanter);
+                            formLista.Add(nyForm);
+
+                            break;
+
                         case "HEPTAGON":
+
+                            antalKanter = 7;
+
+                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore, antalKanter);
+                            formLista.Add(nyForm);
+
+                            break;
+
+
                         case "OCTAGON":
 
-                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore);
+                            antalKanter = 8;
+
+                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore, antalKanter);
                             formLista.Add(nyForm);
+
+
 
 
                             break;
