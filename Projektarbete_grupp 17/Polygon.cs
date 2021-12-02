@@ -13,7 +13,7 @@ namespace Projektarbete_grupp_17
 
         public double apothem { get; private set; }
 
-        public Koordinat koordinat;
+        public Koordinat mittpunkt;
 
         private double offset;
 
@@ -21,7 +21,7 @@ namespace Projektarbete_grupp_17
 
         public double angle = Math.PI * 2 / 2;
 
-        public Polygon (string formtyp, Koordinat _koordinat, int omkrets, int shapeScore)
+        public Polygon (string formtyp, Koordinat mittpunkt, int omkrets, int shapeScore) : base(formtyp, mittpunkt, omkrets, shapeScore)
         {
 
         }
@@ -38,8 +38,8 @@ namespace Projektarbete_grupp_17
 
             for (int i = 0; i < antalsidor; i++)
             {
-                double X = Mittpunkt.x + GetApothem() * Math.Sin(i * angle + offset);
-                double Y = Mittpunkt.y + GetApothem() * Math.Cos(i * angle + offset);
+                double X = mittpunkt.x + GetApothem() * Math.Sin(i * angle + offset);
+                double Y = mittpunkt.y + GetApothem() * Math.Cos(i * angle + offset);
             }
         }
 
