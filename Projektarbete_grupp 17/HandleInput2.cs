@@ -10,7 +10,6 @@ namespace Projektarbete_grupp_17
     {
         
         public string[] arg2Array;
-
         
         int x;
         int y;
@@ -49,33 +48,41 @@ namespace Projektarbete_grupp_17
                     y = Convert.ToInt32(formVärden[2]);
                     omkrets = Convert.ToInt32(formVärden[3]);
                     koordinat = new Koordinat(x, y);
+
                     for (int j = 0; j < shapeScores.Count; j++)
                     {
-                        if (formtyp == shapeScores[0].form)
+                        if (formtyp == shapeScores[j].form)
                         {
                             shapeScore = shapeScores[j].score;
                         }
-                        
                     }
                     switch (formtyp)
                     {
                         case "CIRCLE":
 
-                            nyForm = new Cirkel(formtyp, koordinat, omkrets);
+                            nyForm = new Cirkel(formtyp, koordinat, omkrets, shapeScore) ;
                             formLista.Add(nyForm);
-
 
                             break;
+
                         case "SQUARE":
 
-                            nyForm = new Fyrkant(formtyp, koordinat, omkrets);
+                            nyForm = new Fyrkant(formtyp, koordinat, omkrets, shapeScore);
                             formLista.Add(nyForm);
-
 
                             break;
                         case "TRIANGLE":
 
-                            nyForm = new Triangel(formtyp, koordinat, omkrets);
+                            nyForm = new Triangel(formtyp, koordinat, omkrets, shapeScore);
+                            formLista.Add(nyForm);
+                            break;
+
+                        case "PENTAGON":
+                        case "HEXAGON":
+                        case "HEPTAGON":
+                        case "OCTAGON":
+
+                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore);
                             formLista.Add(nyForm);
 
 

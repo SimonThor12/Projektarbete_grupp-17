@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    abstract class Polygon //: Form
+    class Polygon : Form
     {
         public double antalsidor;
         public int perimeter { get; private set; }
 
         public double apothem { get; private set; }
 
-        public Koordinat Mittpunkt;
+        public Koordinat koordinat;
 
         private double offset;
 
@@ -21,7 +21,10 @@ namespace Projektarbete_grupp_17
 
         public double angle = Math.PI * 2 / 2;
 
-        
+        public Polygon (string formtyp, Koordinat _koordinat, int omkrets, int shapeScore)
+        {
+
+        }
         public void GetKoordinaterFörHörn()
         {
             if (antalsidor % 2 == 0)

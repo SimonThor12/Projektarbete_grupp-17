@@ -16,6 +16,7 @@ namespace Projektarbete_grupp_17
         int s;
      
         List<Koordinat> punktLista = new List<Koordinat>();
+        List<int> pointScores = new List<int>();
 
         public HandleInput1(string arg1)
         {
@@ -37,7 +38,10 @@ namespace Projektarbete_grupp_17
                     y = Convert.ToInt32(punktVärden[1]);
                     s = Convert.ToInt32(punktVärden[2]);
 
-                    punktLista.Add(new Koordinat(x, y, s));
+                    //Notera att Koordinat och poäng för denna koordinat har samma index men för olika listor
+                    punktLista.Add(new Koordinat(x, y));
+                    pointScores.Add(s);
+
                 }
             }
 
@@ -46,11 +50,10 @@ namespace Projektarbete_grupp_17
 
         }
 
-        public List<Koordinat> GetPoints ()
+        public List<Koordinat> GetPunkter ()
         {
             return punktLista;
         }
-
 
     }
 

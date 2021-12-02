@@ -9,14 +9,11 @@ namespace Projektarbete_grupp_17
     class Cirkel : Form
     {
 
-        public Cirkel(string form, Koordinat koordinat, int omkrets) : base (form, koordinat, omkrets, )
+        public Cirkel(string form, Koordinat mittpunkt, int omkrets, int shapeScore) 
+            : base (form, mittpunkt, omkrets, shapeScore)
 
         {
             // Radie = perimeter / (2 * Math.PI);
-
-
-
-
         }
 
         public double GetArea()

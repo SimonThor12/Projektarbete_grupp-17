@@ -23,7 +23,7 @@ namespace Projektarbete_grupp_17
         {
             return Sida * Sida;
         }
-        public Fyrkant(string form,Koordinat koordinat, int omkrets) : base(form,koordinat,omkrets,5)
+        public Fyrkant(string form,Koordinat koordinat, int omkrets, int shapeScore) : base(form,koordinat,omkrets, shapeScore)
         {
             kordinaterFörEnFykant = koordinat;
             Sida = omkrets / 4;
