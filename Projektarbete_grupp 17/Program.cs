@@ -13,6 +13,7 @@ namespace Projektarbete_grupp_17
             HandleInput2 FormerInput = new HandleInput2("CIRCLE,2,3,100", ShapescoreInput);
             
             HandleAllInput input = new HandleAllInput(IHandler<Punkt>, IHandler<Form>, IHandler<ShapeScore>);
+            HämtalTotalPoäng TotalPoäng;
 
             //Koordinat kordinat = new Koordinat(3, 6);
 
