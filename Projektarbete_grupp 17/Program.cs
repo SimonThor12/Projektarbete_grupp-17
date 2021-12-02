@@ -12,7 +12,7 @@ namespace Projektarbete_grupp_17
             HandleInput3 ShapescoreInput = new HandleInput3("CIRCLE,100; TRIANGLE,500;");
             HandleInput2 FormerInput = new HandleInput2("CIRCLE,2,3,100", ShapescoreInput);
             
-            HandleAllInput input = new HandleAllInput(IHandler<Punkt>, IHandler<Form>, IHandler<ShapeScore>)new HandleInput2("CIRCLE,2,3,100", ShapescoreInput), new HandleInput3("CIRCLE,100; TRIANGLE,500;"));
+            HandleAllInput input = new HandleAllInput(IHandler<Punkt>, IHandler<Form>, IHandler<ShapeScore>);
 
             //Koordinat kordinat = new Koordinat(3, 6);
 
