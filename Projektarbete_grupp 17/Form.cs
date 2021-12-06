@@ -14,7 +14,7 @@ namespace Projektarbete_grupp_17
 
         protected int antalSidor;
 
-        protected string formtyp { get; set; }
+        public string formtyp { get; set; }
         
         public int shapeScore { get; private set; }
         public Form (string formtyp, Koordinat _koordinat, int omkrets, int shapeScore, int antalSidor)
@@ -23,12 +23,11 @@ namespace Projektarbete_grupp_17
             this.formtyp = formtyp;
             mittpunkt = _koordinat;
         }
-
-
         
         public virtual bool IsInside (Koordinat punkt)
         {
             return true;
         }
+       
     }
 }

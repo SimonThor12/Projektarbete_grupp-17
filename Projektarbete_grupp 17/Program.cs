@@ -13,7 +13,7 @@ namespace Projektarbete_grupp_17
             HandleInput2 FormerInput = new HandleInput2("CIRCLE,2,3,100", ShapescoreInput);
             HandleInput1 Input1 = new HandleInput1("1,2,3");
             HandleAllInput input = new HandleAllInput(Input1, FormerInput, ShapescoreInput);
-            HämtalTotalPoäng TotalPoäng;
+            HämtalTotalPoäng TotalPoäng = new HämtalTotalPoäng(input);
 
             //Koordinat kordinat = new Koordinat(3, 6);
 

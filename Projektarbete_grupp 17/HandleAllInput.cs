@@ -9,14 +9,75 @@ namespace Projektarbete_grupp_17
     class HandleAllInput
 
     {
-        public IHandler<Punkt> punktLista { get; private set; }
-        public IHandler<Form> formLista { get; private set; }
-        public HandleInput3 shapeScore { get; private set; }
+        public List<Punkt> punktLista { get; private set; }
+        public List<Form> formLista { get; private set; }
+        public Dictionary<string,int> shapeScoreLista { get; private set; }
         public HandleAllInput(IHandler<Punkt> punktLista, IHandler<Form> formLista, HandleInput3 shapeScore)
         {
-            this.punktLista = punktLista;
-            this.formLista = formLista;
-            this.shapeScore = shapeScore;
+            this.punktLista = punktLista.HandleInput();
+            this.formLista = formLista.HandleInput();
+            this.shapeScoreLista = shapeScore.HandleInput();
         }
+
+        public void GetPunkterFrånLista ()
+        {
+            for (int i = 0; i < punktLista.Count; i++)
+            {
+                
+            }
+        }
+
+        public void GetFormerFrånLista ()
+        {
+            for (int i = 0; i < formLista.Count; i++)
+            {
+                switch (formLista[i].formtyp)
+                {
+                    case "CIRCLE":
+                        
+
+
+                        break;
+
+                    case "SQUARE":
+
+
+
+
+                        break;
+                    case "TRIANGLE":
+
+
+
+                        break;
+                    case "PENTAGON":
+
+
+
+                        break;
+
+                    case "HEXAGON":
+
+
+                        break;
+
+                    case "HEPTAGON":
+
+
+
+                        break;
+
+
+                    case "OCTAGON":
+
+
+
+                        break;
+                }
+            }
+
+
+
+        
     }
 }
