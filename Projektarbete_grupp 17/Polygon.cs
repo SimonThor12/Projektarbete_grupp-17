@@ -52,7 +52,7 @@ namespace Projektarbete_grupp_17
         {
             double X = punkt.x;
             double Y = punkt.y;
-            int j = vertices.Count - 1;
+            double j = GetLängdAvSida() - 1;
             bool IS_HIT = false;
 
             for (int i = 0; i < vertices.Count; i++)
