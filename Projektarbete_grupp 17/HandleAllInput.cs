@@ -17,7 +17,22 @@ namespace Projektarbete_grupp_17
             this.punktLista = punktLista.HandleInput();
             this.formLista = formLista.HandleInput();
             this.shapeScoreLista = shapeScore.HandleInput();
+
+            
         }
+
+        public int GetShapeScore ()
+        {
+            
+                if (shapeScoreLista.TryGetValue("CIRCLE", out int value))
+                {
+                    return value;
+                }
+                
+            
+        }
+
+        
 
         public void GetPunkterFrånLista ()
         {
