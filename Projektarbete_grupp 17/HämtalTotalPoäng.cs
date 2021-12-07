@@ -26,6 +26,7 @@ namespace Projektarbete_grupp_17
         public long KalkTotalPoäng ()
         {
             
+            
         }
         public long OutPut1Cirkel(Form formen, Koordinat punkten)
         {
