@@ -53,10 +53,10 @@ namespace Projektarbete_grupp_17
             GetKoordinaterFörHörn();
             double X = punkt.x;
             double Y = punkt.y;
-            int j = antalsidor - 1;
+            int j = vertices.Count - 1;
             bool IS_HIT = false;
 
-            for (int i = 0; i < antalsidor; i++)
+            for (int i = 0; i < vertices.Count; i++)
             {
                 if(vertices[i].y < Y && vertices[j].y <= Y || vertices[j].y < Y && vertices[i].y >= Y )
                 {
