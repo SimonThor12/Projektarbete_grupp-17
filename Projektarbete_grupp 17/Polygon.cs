@@ -8,7 +8,7 @@ namespace Projektarbete_grupp_17
 {
     class Polygon : Form
     {
-        public double antalsidor;
+        public int antalsidor;
         public int perimeter { get; private set; }
 
         List<Koordinat> vertices;
@@ -52,10 +52,10 @@ namespace Projektarbete_grupp_17
         {
             double X = punkt.x;
             double Y = punkt.y;
-            double j = GetLängdAvSida() - 1;
+            int j = antalsidor - 1;
             bool IS_HIT = false;
 
-            for (int i = 0; i < vertices.Count; i++)
+            for (int i = 0; i < antalsidor; i++)
             {
                 if(vertices[i].y < Y && vertices[j].y <= Y || vertices[j].y < Y && vertices[i].y >= Y )
                 {
