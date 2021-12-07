@@ -11,14 +11,14 @@ namespace Projektarbete_grupp_17
         long totalScore;
         List<Punkt> punktLista;
         List<Form> formLista;
-        List<ShapeScore> shapeScoreLista;
+        Dictionary<string, int> shapeScoreLista;
 
 
         public HämtalTotalPoäng (HandleAllInput Input)
         {
             this.punktLista = (List<Punkt>)Input.punktLista;
             this.formLista = (List<Form>)Input.formLista;
-            this.shapeScoreLista = (List<ShapeScore>)Input.shapeScoreLista;
+            this.shapeScoreLista = (Dictionary<string,int>)Input.shapeScoreLista;
             //totalScore = KalkTotalPoäng(former, punkt);
         }
 
