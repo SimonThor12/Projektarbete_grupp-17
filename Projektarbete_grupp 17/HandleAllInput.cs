@@ -23,44 +23,49 @@ namespace Projektarbete_grupp_17
 
         public int GetShapeScore ()
         {
-            if (shapeScoreLista.TryGetValue("CIRCLE", out int circlevalue))
+            foreach (Form form in formLista)
             {
-                return circlevalue;
-            }
-            if (shapeScoreLista.TryGetValue("SQUARE", out int squarevalue))
-            {
-                return squarevalue;
-            }
-            if (shapeScoreLista.TryGetValue("TRIANGLE", out int trianglevalue))
-            {
-                return trianglevalue;
-            }
-            if (shapeScoreLista.TryGetValue("PENTAGON", out int pentagonvalue))
-            {
-                return pentagonvalue;
-            }
-            if (shapeScoreLista.TryGetValue("HEXAGON", out int hexagonvalue))
-            {
-                return hexagonvalue;
-            }
 
-            if (shapeScoreLista.TryGetValue("HEPTAGON", out int heptagonvalue))
-            {
-                return heptagonvalue;
-            }
+                if (shapeScoreLista.TryGetValue("CIRCLE", out int circlevalue) && form.formtyp == "CIRCLE")
+                {
+                    return circlevalue;
+                }
+                if (shapeScoreLista.TryGetValue("SQUARE", out int squarevalue) && form.formtyp == "SQUARE")
+                {
+                    return squarevalue;
+                }
+                if (shapeScoreLista.TryGetValue("TRIANGLE", out int trianglevalue) && form.formtyp == "TRIANGLE")
+                {
+                    return trianglevalue;
+                }
+                if (shapeScoreLista.TryGetValue("PENTAGON", out int pentagonvalue) && form.formtyp == "PENTAGON")
+                {
+                    return pentagonvalue;
+                }
+                if (shapeScoreLista.TryGetValue("HEXAGON", out int hexagonvalue) && form.formtyp == "HEAXGON")
+                {
+                    return hexagonvalue;
+                }
 
-            if (shapeScoreLista.TryGetValue("OCTAGON", out int octagonvalue))
-            {
-                return octagonvalue;
+                if (shapeScoreLista.TryGetValue("HEPTAGON", out int heptagonvalue) && form.formtyp == "HEPTAGON")
+                {
+                    return heptagonvalue;
+                }
+
+                if (shapeScoreLista.TryGetValue("OCTAGON", out int octagonvalue) && form.formtyp == "OCTAGON")
+                {
+                    return octagonvalue;
+                }
+                else
+                {
+                    return 0;
+                }
             }
-            else
-            {
-                return 0;
-            }
+            return 0;
 
         }
 
-        
+
 
         public void GetPunkterFrånLista ()
         {

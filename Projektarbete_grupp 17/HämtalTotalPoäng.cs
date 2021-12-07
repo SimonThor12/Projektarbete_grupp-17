@@ -28,7 +28,7 @@ namespace Projektarbete_grupp_17
             
             
         }
-        public long OutPut1Cirkel(Form formen, Koordinat punkten)
+        public long OutPutCirkel(Form formen, Koordinat punkten)
         {
             if (formen.cirkel.IsInside(punkten))
             {
