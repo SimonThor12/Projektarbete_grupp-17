@@ -30,8 +30,6 @@ namespace Projektarbete_grupp_17
                 }
         }
 
-        
-
         public void GetPunkterFrånLista ()
         {
             for (int i = 0; i < punktLista.Count; i++)
