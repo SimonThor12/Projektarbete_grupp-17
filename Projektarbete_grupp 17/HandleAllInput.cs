@@ -34,7 +34,7 @@ namespace Projektarbete_grupp_17
                 switch (formLista[i].formtyp)
                 {
                     case "CIRCLE":
-                        
+                       
 
 
                         break;

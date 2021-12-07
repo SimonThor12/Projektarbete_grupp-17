@@ -17,7 +17,7 @@ namespace Projektarbete_grupp_17
         public HämtalTotalPoäng (HandleAllInput Input)
         {
             this.punktLista = (List<Punkt>)Input.punktLista;
-            this.formLista = (List<Form>)Input.punktLista;
+            this.formLista = (List<Form>)Input.formLista;
             this.shapeScoreLista = (List<ShapeScore>)Input.shapeScoreLista;
             //totalScore = KalkTotalPoäng(former, punkt);
         }
@@ -30,11 +30,11 @@ namespace Projektarbete_grupp_17
         {
             if (formen.cirkel.IsInside(punkten))
             {
-                return (long)formen.cirkel.GetArea() * punkten.pointScore * formen.shapeScore;
+                return (long)formen.cirkel.GetArea() + punkten.pointScore + formen.shapeScore;
             }
             else
             {
-                return (long)(formen.cirkel.GetArea() * formen.shapeScore) / 4;
+                return (long)(formen.cirkel.GetArea() + formen.shapeScore) / 4;
             }
 
             //}
