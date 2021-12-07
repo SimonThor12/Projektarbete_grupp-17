@@ -64,7 +64,17 @@ namespace Projektarbete_grupp_17
             return 0;
 
         }
+        public int GetPointScore()
+        {
+            foreach(Punkt punkten in punktLista)
+            {
+                return punkten.pointScore;
+                
 
+                
+            }
+            return 0;
+        }
 
 
         public void GetPunkterFrånLista ()
