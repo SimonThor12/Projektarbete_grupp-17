@@ -53,6 +53,10 @@ namespace Projektarbete_grupp_17
             {
                 return octagonvalue;
             }
+            else
+            {
+                return 0;
+            }
 
         }
 
