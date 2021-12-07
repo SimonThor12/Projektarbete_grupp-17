@@ -19,6 +19,7 @@ namespace Projektarbete_grupp_17
         public double GetArea()
         {
             return Radie * Radie * Math.PI;
+            ///
         }
 
         public double GetPerimeter()
