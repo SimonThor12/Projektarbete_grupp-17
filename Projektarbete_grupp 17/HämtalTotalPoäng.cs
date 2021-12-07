@@ -21,34 +21,32 @@ namespace Projektarbete_grupp_17
             this.formLista = (List<Form>)AllInput.formLista;
             this.shapeScoreLista = (Dictionary<string,int>)AllInput.shapeScoreLista;
             //totalScore = KalkTotalPoäng(former, punkt);
-            allInput.GetPointScore();
+            int [] pointScoreArray = allInput.GetPointScore();
 
         }
 
-       public long KalkTotalPoäng ()
+       public double KalkTotalPoäng ()
         {
-            
-                return allInput.GetAreaForUsedShapes() + POINTSCORE + allInput.GetShapeScoreForCircle();
-            
-            else
+            for (int i = 0; i < punktLista.Count; i++)
+            {
+                if (formLista[i].IsInside(punktLista[i].koordinat) && formLista[i].formtyp == "CIRCLE")
+                {
+                    return allInput.GetAreaForUsedShapes() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
+                }
+                if (formLista[i].IsInside(punktLista[i].koordinat) && formLista[i].formtyp == "SQUARE")
+                {
+                    return allInput.GetAreaForUsedShapes() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
+                }
+
+                else
             {
                 return (long)(formen.cirkel.GetArea() + allInput.GetShapeScoreForCircle()) / 4;
             }
         }
+          
+        }
        
             
 
-            //}
-            //public long OutPut1Fyrkant(Form formen, Koordinat punkten)
-            //{
-            //    if (formen.fyrkant.InnanFörFyrkantKordinat(punkten))
-            //    {
-            //        return (long)formen.fyrkant.GetArea() * punkten.pointScore * formen.shapeScore;
-            //    }
-            //    else
-            //    {
-            //        return (long)(formen.fyrkant.GetArea() * formen.shapeScore) / 4;
-            //    }
-            //}
         }
 }
