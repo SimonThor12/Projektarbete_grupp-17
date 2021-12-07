@@ -25,28 +25,89 @@ namespace Projektarbete_grupp_17
 
         }
 
-       public double KalkTotalPoäng ()
+        public double KalkTotalPoäng()
         {
+            double totalPoäng = 0;
+
             for (int i = 0; i < punktLista.Count; i++)
             {
-                if (formLista[i].IsInside(punktLista[i].koordinat) && formLista[i].formtyp == "CIRCLE")
+                for (int j = 0; j < formLista.Count; j++)
                 {
-                    return allInput.GetAreaForUsedShapes() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
-                }
-                if (formLista[i].IsInside(punktLista[i].koordinat) && formLista[i].formtyp == "SQUARE")
-                {
-                    return allInput.GetAreaForUsedShapes() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
-                }
+                    if (formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "CIRCLE")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
+                    }
+                    else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp=="CIRCLE")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes()+allInput.GetShapeScoreForCircle() / 4;
+                    }
+        
+        
+                    if (formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "SQUARE")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
+                    }
+                    else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "SQUARE")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForCircle() / 4;
+                    }
 
-                else
-            {
-                return (long)(formen.cirkel.GetArea() + allInput.GetShapeScoreForCircle()) / 4;
+
+                    if (formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "TRIANGLE")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
+                    }
+                    else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "TRIANGLE")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForCircle() / 4;
+                    }
+
+
+                    if (formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "PENTAGON")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
+                    }
+                    else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "PENTAGON")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForCircle() / 4;
+                    }
+
+
+                    if (formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "HEXAGON")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
+                    }
+                    else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "HEXAGON")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForCircle() / 4;
+                    }
+
+
+                    if (formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "HEPTAGON")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
+                    }
+                    else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "HEPTAGON")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForCircle() / 4;
+                    }
+
+
+                    if (formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "OCTAGON")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
+                    }
+                    else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "OCTAGON")
+                    {
+                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForCircle() / 4;
+                    }
+                }
+                
             }
-        }
-          
-        }
-       
-            
+            return totalPoäng;
+
 
         }
+
+    }
 }
