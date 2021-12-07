@@ -110,11 +110,15 @@ namespace Projektarbete_grupp_17
         {
             int[] arr = new int[2];
             int index = 0;
-            foreach(Punkt punkten in punktLista)
+            int i = 0;
+            foreach (Punkt punkten in punktLista)
             {
-                int i = 0;
-                if(formLista[i].IsInside(punkten.koordinat))
-                arr[index] += punkten.pointScore;
+                
+                if (formLista[i].IsInside(punkten.koordinat))
+                {
+                    arr[index] += punkten.pointScore;
+                }
+                
                 index++;
                 i++;
 
