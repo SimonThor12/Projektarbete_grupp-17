@@ -21,19 +21,20 @@ namespace Projektarbete_grupp_17
             this.formLista = (List<Form>)AllInput.formLista;
             this.shapeScoreLista = (Dictionary<string,int>)AllInput.shapeScoreLista;
             //totalScore = KalkTotalPoäng(former, punkt);
+            allInput.GetPointScore();
+
         }
 
-       /* public long KalkTotalPoäng ()
+       public long KalkTotalPoäng ()
         {
-            if (formen.cirkel.IsInside(punkten))
-            {
-                return (long)formen.cirkel.GetArea() + punkten.pointScore + allInput.GetShapeScoreForCircle();
-            }
+            
+                return allInput.GetAreaForUsedShapes() + POINTSCORE + allInput.GetShapeScoreForCircle();
+            
             else
             {
                 return (long)(formen.cirkel.GetArea() + allInput.GetShapeScoreForCircle()) / 4;
             }
-        }*/
+        }
        
             
 

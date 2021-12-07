@@ -28,6 +28,11 @@ namespace Projektarbete_grupp_17
         {
             return true;
         }
+
+        public virtual double GetArea()
+        {
+            return 0;
+        }
        
     }
 }

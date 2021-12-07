@@ -19,7 +19,7 @@ namespace Projektarbete_grupp_17
         public double Xmax { get; private set; }
         public double Xmin { get; private set; }
 
-        public double GetArea()
+        public override double GetArea()
         {
             return Sida * Sida;
         }

@@ -16,7 +16,7 @@ namespace Projektarbete_grupp_17
             // Radie = perimeter / (2 * Math.PI);
         }
 
-        public double GetArea()
+        public override double GetArea()
         {
             return Radie * Radie * Math.PI;
             ///

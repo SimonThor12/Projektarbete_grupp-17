@@ -71,7 +71,7 @@ namespace Projektarbete_grupp_17
             return IS_HIT;
         }
         
-        public double GetArea()
+        public override double GetArea()
         {
             //Matematisk formel: A = 1/2 * apothem * perimeter
 
