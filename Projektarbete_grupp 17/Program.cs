@@ -11,10 +11,10 @@ namespace Projektarbete_grupp_17
             //HandleInput1 punkterInput = new HandleInput1("1,2, ; 3,5,7 ; 5,7,89");
             HandleInput3 ShapescoreInput = new HandleInput3("CIRCLE,100; TRIANGLE,500;");
             HandleInput2 FormerInput = new HandleInput2("CIRCLE,2,3,100", ShapescoreInput);
-            HandleInput1 Input1 = new HandleInput1("1,2,3");
+            HandleInput1 Input1 = new HandleInput1("1,2,3;1,2,5");
             HandleAllInput input = new HandleAllInput(Input1, FormerInput, ShapescoreInput);
-            HämtalTotalPoäng TotalPoäng = new HämtalTotalPoäng(input);
-
+            //HämtalTotalPoäng TotalPoäng = new HämtalTotalPoäng(input);
+            input.GetPointScore();
             //Koordinat kordinat = new Koordinat(3, 6);
 
             

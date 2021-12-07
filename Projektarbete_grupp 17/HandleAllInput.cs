@@ -105,35 +105,33 @@ namespace Projektarbete_grupp_17
             return 0;
 
         }
-        public int GetPointScore()
+        public int[] GetPointScore()
         {
+            int[] arr = new int[2];
+            int index = 0;
             foreach(Punkt punkten in punktLista)
             {
-                return punkten.pointScore;
-                
+                if(formLista.Form.formtyp.IsInside(punkten.koordinat))
+                arr[index] += punkten.pointScore;
+                index++;
 
-                
+
             }
-            return 0;
+            return arr;
         }
 
 
-        public void GetPunkterFrånLista ()
-        {
-            for (int i = 0; i < punktLista.Count; i++)
-            {
-                
-            }
-        }
 
-        public void GetFormerFrånLista ()
+
+
+        public void GetFormerFrånLista()
         {
             for (int i = 0; i < formLista.Count; i++)
             {
                 switch (formLista[i].formtyp)
                 {
                     case "CIRCLE":
-                       
+
 
 
                         break;
@@ -176,7 +174,7 @@ namespace Projektarbete_grupp_17
             }
 
 
-
+        }
         
     }
 }

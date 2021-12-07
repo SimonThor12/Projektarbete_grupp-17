@@ -23,7 +23,7 @@ namespace Projektarbete_grupp_17
             //totalScore = KalkTotalPoäng(former, punkt);
         }
 
-        public long KalkTotalPoäng ()
+       /* public long KalkTotalPoäng ()
         {
             if (formen.cirkel.IsInside(punkten))
             {
@@ -33,7 +33,7 @@ namespace Projektarbete_grupp_17
             {
                 return (long)(formen.cirkel.GetArea() + formen.shapeScore) / 4;
             }
-        }
+        }*/
        
             
 
