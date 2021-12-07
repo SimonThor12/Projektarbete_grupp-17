@@ -117,7 +117,6 @@ namespace Projektarbete_grupp_17
                 arr[index] += punkten.pointScore;
                 index++;
                 i++;
-
             }
             return arr;
         }
