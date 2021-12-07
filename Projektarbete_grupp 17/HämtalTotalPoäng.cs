@@ -12,14 +12,14 @@ namespace Projektarbete_grupp_17
         List<Punkt> punktLista;
         List<Form> formLista;
         Dictionary<string, int> shapeScoreLista;
+        HandleAllInput allInput;
 
-
-        public HämtalTotalPoäng (HandleAllInput Input)
+        public HämtalTotalPoäng (HandleAllInput AllInput)
         {
-            Input.GetShapeScore();
-            this.punktLista = (List<Punkt>)Input.punktLista;
-            this.formLista = (List<Form>)Input.formLista;
-            this.shapeScoreLista = (Dictionary<string,int>)Input.shapeScoreLista;
+            allInput = AllInput;
+            this.punktLista = (List<Punkt>)AllInput.punktLista;
+            this.formLista = (List<Form>)AllInput.formLista;
+            this.shapeScoreLista = (Dictionary<string,int>)AllInput.shapeScoreLista;
             //totalScore = KalkTotalPoäng(former, punkt);
         }
 
@@ -27,7 +27,7 @@ namespace Projektarbete_grupp_17
         {
             if (formen.cirkel.IsInside(punkten))
             {
-                return (long)formen.cirkel.GetArea() + punkten.pointScore + formen.shapeScore;
+                return (long)formen.cirkel.GetArea() + punkten.pointScore + allInput.GetShapeScoreForCircle();
             }
             else
             {

@@ -17,12 +17,83 @@ namespace Projektarbete_grupp_17
             this.punktLista = punktLista.HandleInput();
             this.formLista = formLista.HandleInput();
             this.shapeScoreLista = shapeScore.HandleInput();
-
             
         }
-
-        public int GetShapeScore ()
+        public int GetShapeScoreForSquare()
         {
+            foreach (Form form in formLista)
+            {
+                if (shapeScoreLista.TryGetValue("SQUARE", out int squarevalue) && form.formtyp == "SQUARE")
+                {
+                    return squarevalue;
+                }
+            }
+            return 0;
+
+        }
+        public int GetShapeScoreForTriangle()
+        {
+            foreach (Form form in formLista)
+            {
+                if (shapeScoreLista.TryGetValue("TRIANGLE", out int squarevalue) && form.formtyp == "TRIANGLE")
+                {
+                    return squarevalue;
+                }
+            }
+            return 0;
+
+        }
+        public int GetShapeScoreForPentagon()
+        {
+            foreach (Form form in formLista)
+            {
+                if (shapeScoreLista.TryGetValue("PENTAGON", out int pentagonvalue) && form.formtyp == "PENTAGON")
+                {
+                    return pentagonvalue;
+                }
+            }
+            return 0;
+
+        }
+        public int GetShapeScoreForHexagon()
+        {
+            foreach (Form form in formLista)
+            {
+                if (shapeScoreLista.TryGetValue("HEXAGON", out int pentagonvalue) && form.formtyp == "HEXAGON")
+                {
+                    return pentagonvalue;
+                }
+            }
+            return 0;
+
+        }
+        public int GetShapeScoreForHeptagon()
+        {
+            foreach (Form form in formLista)
+            {
+                if (shapeScoreLista.TryGetValue("HEPTAGON", out int heptagonvalue) && form.formtyp == "HEPTAGON")
+                {
+                    return heptagonvalue;
+                }
+            }
+            return 0;
+
+        }
+        public int GetShapeScoreForOktagon()
+        {
+            foreach (Form form in formLista)
+            {
+                if (shapeScoreLista.TryGetValue("OCTAGON", out int octagonvalue) && form.formtyp == "OCTAGON")
+                {
+                    return octagonvalue;
+                }
+            }
+            return 0;
+
+        }
+
+        public int GetShapeScoreForCircle()
+        { 
             foreach (Form form in formLista)
             {
 
@@ -30,42 +101,10 @@ namespace Projektarbete_grupp_17
                 {
                     return circlevalue;
                 }
-                if (shapeScoreLista.TryGetValue("SQUARE", out int squarevalue) && form.formtyp == "SQUARE")
-                {
-                    return squarevalue;
-                }
-                if (shapeScoreLista.TryGetValue("TRIANGLE", out int trianglevalue) && form.formtyp == "TRIANGLE")
-                {
-                    return trianglevalue;
-                }
-                if (shapeScoreLista.TryGetValue("PENTAGON", out int pentagonvalue) && form.formtyp == "PENTAGON")
-                {
-                    return pentagonvalue;
-                }
-                if (shapeScoreLista.TryGetValue("HEXAGON", out int hexagonvalue) && form.formtyp == "HEAXGON")
-                {
-                    return hexagonvalue;
-                }
-
-                if (shapeScoreLista.TryGetValue("HEPTAGON", out int heptagonvalue) && form.formtyp == "HEPTAGON")
-                {
-                    return heptagonvalue;
-                }
-
-                if (shapeScoreLista.TryGetValue("OCTAGON", out int octagonvalue) && form.formtyp == "OCTAGON")
-                {
-                    return octagonvalue;
-                }
-                else
-                {
-                    return 0;
-                }
             }
             return 0;
 
         }
-
-
 
         public void GetPunkterFrånLista ()
         {
