@@ -16,6 +16,7 @@ namespace Projektarbete_grupp_17
 
         public HämtalTotalPoäng (HandleAllInput Input)
         {
+            Input.GetShapeScore();
             this.punktLista = (List<Punkt>)Input.punktLista;
             this.formLista = (List<Form>)Input.formLista;
             this.shapeScoreLista = (Dictionary<string,int>)Input.shapeScoreLista;

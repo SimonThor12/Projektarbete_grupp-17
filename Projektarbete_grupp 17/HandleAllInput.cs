@@ -23,13 +23,11 @@ namespace Projektarbete_grupp_17
 
         public int GetShapeScore ()
         {
-            
-                if (shapeScoreLista.TryGetValue("CIRCLE", out int value))
+
+            if (shapeScoreLista.TryGetValue("CIRCLE", out int value))
                 {
                     return value;
                 }
-                
-            
         }
 
         
