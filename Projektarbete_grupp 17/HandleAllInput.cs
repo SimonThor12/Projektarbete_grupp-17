@@ -19,6 +19,7 @@ namespace Projektarbete_grupp_17
             this.shapeScoreLista = shapeScore.HandleInput();
             
         }
+
         public int GetShapeScoreForSquare()
         {
             foreach (Form form in formLista)

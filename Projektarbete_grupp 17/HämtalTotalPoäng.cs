@@ -31,7 +31,7 @@ namespace Projektarbete_grupp_17
             }
             else
             {
-                return (long)(formen.cirkel.GetArea() + formen.shapeScore) / 4;
+                return (long)(formen.cirkel.GetArea() + allInput.GetShapeScoreForCircle()) / 4;
             }
         }*/
        
