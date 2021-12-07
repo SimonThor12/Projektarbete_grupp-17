@@ -15,7 +15,6 @@ namespace Projektarbete_grupp_17
         {
             form = Form;
             score = Score;
-            
         }
 
         

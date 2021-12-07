@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projektarbete_grupp_17
 {
-    class HandleInput1
+    class HandleInput1: IHandler<Punkt>
     {
         public string[] arg1Array;
 
@@ -15,7 +15,7 @@ namespace Projektarbete_grupp_17
         int y;
         int s;
      
-        public List<Koordinat> punktLista;
+        List<Punkt> punktLista = new List<Punkt>();
 
         public HandleInput1(string arg1)
         {
@@ -37,16 +37,18 @@ namespace Projektarbete_grupp_17
                     y = Convert.ToInt32(punktVärden[1]);
                     s = Convert.ToInt32(punktVärden[2]);
 
-                    punktLista[i] = new Koordinat(x, y, s);
+                    
+                    punktLista.Add(new Punkt(new Koordinat(x,y), s));
+
                 }
             }
 
-            
-            
-
         }
 
-
+        public List<Punkt> HandleInput()
+        {
+            return punktLista; 
+        }
     }
 
         
