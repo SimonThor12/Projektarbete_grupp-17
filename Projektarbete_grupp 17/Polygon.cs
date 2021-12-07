@@ -11,7 +11,7 @@ namespace Projektarbete_grupp_17
         public int antalsidor;
         public int perimeter { get; private set; }
 
-        List<Koordinat> vertices;
+        public List<Koordinat> vertices = new List<Koordinat>();
 
         public double apothem { get; private set; }
 
