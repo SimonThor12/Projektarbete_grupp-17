@@ -25,11 +25,6 @@ namespace Projektarbete_grupp_17
 
         public long KalkTotalPoäng ()
         {
-            
-            
-        }
-        public long OutPutCirkel(Form formen, Koordinat punkten)
-        {
             if (formen.cirkel.IsInside(punkten))
             {
                 return (long)formen.cirkel.GetArea() + punkten.pointScore + formen.shapeScore;
@@ -38,6 +33,9 @@ namespace Projektarbete_grupp_17
             {
                 return (long)(formen.cirkel.GetArea() + formen.shapeScore) / 4;
             }
+        }
+       
+            
 
             //}
             //public long OutPut1Fyrkant(Form formen, Koordinat punkten)
