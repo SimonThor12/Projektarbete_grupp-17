@@ -107,41 +107,7 @@ namespace Projektarbete_grupp_17
 
         }
 
-        public double GetAreaForUsedShapes ()
-        {
-            foreach (Form form in formLista)
-            {
-                if (form.formtyp=="CIRCLE")
-                {
-                    return form.GetArea();
-                }
-                if (form.formtyp == "TRIANGLE")
-                {
-                    return form.GetArea();
-                }
-                if (form.formtyp == "SQUARE")
-                {
-                    return form.GetArea();
-                }
-                if (form.formtyp == "PENTAGON")
-                {
-                    return form.GetArea();
-                }
-                if (form.formtyp == "HEXAGON")
-                {
-                    return form.GetArea();
-                }
-                if (form.formtyp == "HEPTAGON")
-                {
-                    return form.GetArea();
-                }
-                if (form.formtyp == "OKTAGON")
-                {
-                    return form.GetArea();
-                }
-            }
-            return 0;
-        }
+      
         public int[] GetPointScore()
         {
             int[] arr = new int[2];
