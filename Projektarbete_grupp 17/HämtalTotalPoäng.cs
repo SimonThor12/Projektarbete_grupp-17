@@ -39,7 +39,7 @@ namespace Projektarbete_grupp_17
                     }
                     else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp=="CIRCLE")
                     {
-                        totalPoäng += allInput.GetAreaForUsedShapes()+allInput.GetShapeScoreForCircle() / 4;
+                        totalPoäng += (allInput.GetAreaForUsedShapes()+allInput.GetShapeScoreForCircle()) / 4;
                     }
         
         
@@ -49,7 +49,7 @@ namespace Projektarbete_grupp_17
                     }
                     else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "SQUARE")
                     {
-                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForSquare() / 4;
+                        totalPoäng += (allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForSquare()) / 4;
                     }
 
 
@@ -59,7 +59,7 @@ namespace Projektarbete_grupp_17
                     }
                     else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "TRIANGLE")
                     {
-                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForTriangle() / 4;
+                        totalPoäng += (allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForTriangle()) / 4;
                     }
 
 
@@ -69,7 +69,7 @@ namespace Projektarbete_grupp_17
                     }
                     else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "PENTAGON")
                     {
-                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForPentagon() / 4;
+                        totalPoäng += (allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForPentagon()) / 4;
                     }
 
 
@@ -79,7 +79,7 @@ namespace Projektarbete_grupp_17
                     }
                     else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "HEXAGON")
                     {
-                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForHexagon() / 4;
+                        totalPoäng += (allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForHexagon()) / 4;
                     }
 
 
@@ -89,7 +89,7 @@ namespace Projektarbete_grupp_17
                     }
                     else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "HEPTAGON")
                     {
-                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForHeptagon() / 4;
+                        totalPoäng += (allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForHeptagon()) / 4;
                     }
 
 
@@ -99,7 +99,7 @@ namespace Projektarbete_grupp_17
                     }
                     else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "OCTAGON")
                     {
-                        totalPoäng += allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForOktagon() / 4;
+                        totalPoäng += (allInput.GetAreaForUsedShapes() + allInput.GetShapeScoreForOktagon()) / 4;
                     }
                 }
                 
