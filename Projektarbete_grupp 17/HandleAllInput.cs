@@ -36,9 +36,9 @@ namespace Projektarbete_grupp_17
         {
             foreach (Form form in formLista)
             {
-                if (shapeScoreLista.TryGetValue("TRIANGLE", out int squarevalue) && form.formtyp == "TRIANGLE")
+                if (shapeScoreLista.TryGetValue("TRIANGLE", out int trianglevalue) && form.formtyp == "TRIANGLE")
                 {
-                    return squarevalue;
+                    return trianglevalue;
                 }
             }
             return 0;
@@ -60,9 +60,9 @@ namespace Projektarbete_grupp_17
         {
             foreach (Form form in formLista)
             {
-                if (shapeScoreLista.TryGetValue("HEXAGON", out int pentagonvalue) && form.formtyp == "HEXAGON")
+                if (shapeScoreLista.TryGetValue("HEXAGON", out int hexagonvalue) && form.formtyp == "HEXAGON")
                 {
-                    return pentagonvalue;
+                    return hexagonvalue;
                 }
             }
             return 0;
