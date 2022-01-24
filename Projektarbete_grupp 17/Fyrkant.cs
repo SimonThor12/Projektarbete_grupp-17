@@ -32,7 +32,7 @@ namespace Projektarbete_grupp_17
             Ymax = kordinaterFörEnFykant.y + (Sida / 2);
             Ymin = kordinaterFörEnFykant.y - (Sida / 2);
         }
-        public bool InnanFörFyrkantKordinat(Koordinat punkt)
+        override public bool IsInside (Koordinat punkt)
         {
 
             if (punkt.x < Xmax && punkt.x > Xmin && punkt.y < Ymax && punkt.y > Ymin)
