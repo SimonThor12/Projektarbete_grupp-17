@@ -8,18 +8,18 @@ namespace Projektarbete_grupp_17
 {
     class Cirkel : Form
     {
+        
 
         public Cirkel(string form, Koordinat mittpunkt, double omkrets, int shapeScore) 
             : base (form, mittpunkt, omkrets, shapeScore, 0)
 
         {
-            // Radie = perimeter / (2 * Math.PI);
+            
         }
 
         public override double GetArea()
         {
             return Radie * Radie * Math.PI;
-            ///
         }
 
         public double GetPerimeter()
@@ -43,5 +43,6 @@ namespace Projektarbete_grupp_17
                 return false;
             }
         }
+     
     }
 }

@@ -22,6 +22,7 @@ namespace Projektarbete_grupp_17
             this.antalSidor = antalSidor;
             this.formtyp = formtyp;
             mittpunkt = _koordinat;
+            Radie = omkrets / (2 * Math.PI);
         }
         
         public virtual bool IsInside (Koordinat punkt)
@@ -33,6 +34,10 @@ namespace Projektarbete_grupp_17
         {
             return 0;
         }
-       
+
+        public virtual double GetRadie ()
+        {
+            return Radie;
+        }
     }
 }
