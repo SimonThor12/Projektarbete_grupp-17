@@ -17,7 +17,7 @@ namespace Projektarbete_grupp_17
         public string formtyp { get; set; }
         
         public int shapeScore { get; private set; }
-        public Form (string formtyp, Koordinat _koordinat, int omkrets, int shapeScore, int antalSidor)
+        public Form (string formtyp, Koordinat _koordinat, double omkrets, int shapeScore, int antalSidor)
         {
             this.antalSidor = antalSidor;
             this.formtyp = formtyp;

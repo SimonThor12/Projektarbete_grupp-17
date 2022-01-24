@@ -9,7 +9,7 @@ namespace Projektarbete_grupp_17
     class Polygon : Form
     {
         public int antalsidor;
-        public int perimeter { get; private set; }
+        public double perimeter { get; private set; }
 
         public List<Koordinat> vertices = new List<Koordinat>();
 
@@ -21,7 +21,7 @@ namespace Projektarbete_grupp_17
 
         public double angle = Math.PI * 2 / 2;
 
-        public Polygon (string formtyp, Koordinat _mittpunkt, int omkrets, int shapeScore, int antalSidor) 
+        public Polygon (string formtyp, Koordinat _mittpunkt, double omkrets, int shapeScore, int antalSidor) 
             : base(formtyp, _mittpunkt, omkrets, shapeScore, antalSidor)
         {
             perimeter = omkrets;

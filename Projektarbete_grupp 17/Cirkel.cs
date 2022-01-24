@@ -9,7 +9,7 @@ namespace Projektarbete_grupp_17
     class Cirkel : Form
     {
 
-        public Cirkel(string form, Koordinat mittpunkt, int omkrets, int shapeScore) 
+        public Cirkel(string form, Koordinat mittpunkt, double omkrets, int shapeScore) 
             : base (form, mittpunkt, omkrets, shapeScore, 0)
 
         {
