@@ -100,10 +100,5 @@ namespace Projektarbete_grupp_17
             return apothem;
         }
 
-        public virtual double GetRadie()
-        {
-            double Radie = Math.Sqrt(Math.Pow(längdavsida / 2, 2) + Math.Pow(apothem, 2));
-            return Radie;
-        }
     }
 }
