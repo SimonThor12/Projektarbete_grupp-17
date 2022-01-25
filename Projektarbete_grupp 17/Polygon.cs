@@ -62,7 +62,7 @@ namespace Projektarbete_grupp_17
                 {
                     if (vertices[i].x + (Y-vertices[i].y / (vertices[j].y - vertices[i].y) * (vertices[j].x - vertices[i].y)) < X ) 
                     {
-                        IS_HIT = !IS_HIT;
+                        IS_HIT = true;
                     }
                 }
                 j = i;
