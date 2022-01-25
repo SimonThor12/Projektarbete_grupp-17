@@ -96,10 +96,11 @@ namespace Projektarbete_grupp_17
             //    c
             //a = apothem
             
-            double c = GetLängdAvSida() / 2;
+            //double c = GetLängdAvSida() / 2;
 
 
-            double apothem = c * Math.Sqrt(3);
+            double apothem = GetLängdAvSida() / (2 * Math.Tan(180 / antalsidor));
+                //c * Math.Sqrt(3);
             return apothem;
         }
 
