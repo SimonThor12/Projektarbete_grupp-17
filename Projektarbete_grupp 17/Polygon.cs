@@ -78,7 +78,7 @@ namespace Projektarbete_grupp_17
         {
             //Matematisk formel: A = 1/2 * apothem * perimeter
 
-            double area = 0.5 * GetApothem() * perimeter;
+            double area = 0.5 * GetApothem() * längdavsida;
             return area;
         }
 
