@@ -66,7 +66,9 @@ namespace Projektarbete_grupp_17
                     }
                 }
                 j = i;
-                
+
+                return IS_HIT;
+
             }
             return IS_HIT;
         }
