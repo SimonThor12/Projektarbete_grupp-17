@@ -27,7 +27,7 @@ namespace Projektarbete_grupp_17
             perimeter = omkrets;
             antalsidor = antalSidor;
             mittpunkt = _mittpunkt;
-            längdavsida = omkrets / antalSidor;
+            
         }
         public void GetKoordinaterFörHörn()
         {
@@ -76,19 +76,9 @@ namespace Projektarbete_grupp_17
         
         public override double GetArea()
         {
-            if (antalsidor==3)
-            {
-                double area = 0.5 * GetApothem() * längdavsida;
+                       
+                double area = 0.5 * GetApothem() * GetLängdAvSida() * antalsidor;
                 return area;
-            }
-            else
-            {
-                double area = 0.5 * GetApothem() * längdavsida * antalsidor;
-                return area;
-            }
-              
-
-            
             
         }
 
@@ -99,27 +89,18 @@ namespace Projektarbete_grupp_17
         }
         public double GetApothem()
         {
-            if (antalsidor == 3)
-            {
-                double apothem = längdavsida * Math.Sqrt(3) / 2;
-                return apothem;
-            }
-            else
-            {
-                double apothem = längdavsida / (2 * Math.Tan(180 / antalsidor));
-                return apothem;
-            }
+            //double apothem = (längdavsida / 2) / Math.Tan(Math.PI / antalsidor);
 
 
+                double apothem = (GetLängdAvSida() / 2) / (Math.Tan(Math.PI / antalsidor));
+                return apothem;
+    
             // räkna ut apothem med hjälp av trianglar:
             //  |\
             // a| \ b
             //  |__\
             //    c
             //a = apothem
-
-            
-
 
          
         }
