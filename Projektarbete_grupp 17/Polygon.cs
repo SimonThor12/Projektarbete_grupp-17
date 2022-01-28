@@ -75,10 +75,20 @@ namespace Projektarbete_grupp_17
         
         public override double GetArea()
         {
-            //Matematisk formel: A = 1/2 * apothem * perimeter
+            if (antalsidor==3)
+            {
+                double area = 0.5 * GetApothem() * längdavsida;
+                return area;
+            }
+            else
+            {
+                double area = 0.5 * GetApothem() * längdavsida * antalsidor;
+                return area;
+            }
+              
 
-            double area = 0.5 * GetApothem() * längdavsida;
-            return area;
+            
+            
         }
 
         public double GetLängdAvSida()
