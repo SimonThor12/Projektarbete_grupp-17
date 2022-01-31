@@ -27,14 +27,14 @@ namespace Projektarbete_grupp_17
             perimeter = omkrets;
             antalsidor = antalSidor;
             mittpunkt = _mittpunkt;
-            
+            angle = (Math.PI * 2) / antalsidor;
 
         }
         public void GetKoordinaterFörHörn()
         {
             if (antalsidor % 2 == 0)
             {
-                angle = (Math.PI * 2) / antalsidor;
+                
                 offset = angle / 2;
             }
             else
