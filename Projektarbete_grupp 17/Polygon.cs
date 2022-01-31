@@ -63,7 +63,7 @@ namespace Projektarbete_grupp_17
 
             for (int i = 0; i < antalsidor; i++)
             {
-                if(vertices[i].y < Y && vertices[j].y <= Y || vertices[j].y < Y && vertices[i].y >= Y )
+                if(vertices[i].y < Y && vertices[j].y >= Y || vertices[j].y < Y && vertices[i].y >= Y )
                 {
                     if (vertices[i].x + (Y-vertices[i].y / (vertices[j].y - vertices[i].y) * (vertices[j].x - vertices[i].y)) < X )
                     {
