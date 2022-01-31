@@ -21,6 +21,8 @@ namespace Projektarbete_grupp_17
 
         public double angle;
 
+       
+
         public Polygon (string formtyp, Koordinat _mittpunkt, double omkrets, int shapeScore, int antalSidor) 
             : base(formtyp, _mittpunkt, omkrets, shapeScore, antalSidor)
         {
@@ -44,26 +46,26 @@ namespace Projektarbete_grupp_17
 
             for (int i = 0; i < antalsidor; i++)
             {
-                double X = mittpunkt.x + GetApothem() * Math.Sin(i * angle + offset);
-                double Y = mittpunkt.y + GetApothem() * Math.Cos(i * angle + offset);
+                double X = mittpunkt.x + GetRadie() * Math.Sin(i * angle + offset);
+                double Y = mittpunkt.y + GetRadie() * Math.Cos(i * angle + offset);
                 Koordinat nyaKoordinater = new Koordinat(X, Y);
                 vertices.Add(nyaKoordinater);
             }
         }
         
-        public override bool IsInside (Koordinat punkt) 
+        public override bool IsInside (Koordinat punkt)
         {
             GetKoordinaterFörHörn();
             double X = punkt.x;
             double Y = punkt.y;
-            int j = vertices.Count - 1;
+            int j = antalsidor - 1;
             bool IS_HIT = false;
 
-            for (int i = 0; i < vertices.Count; i++)
+            for (int i = 0; i < antalsidor; i++)
             {
                 if(vertices[i].y < Y && vertices[j].y <= Y || vertices[j].y < Y && vertices[i].y >= Y )
                 {
-                    if (vertices[i].x + (Y-vertices[i].y / (vertices[j].y - vertices[i].y) * (vertices[j].x - vertices[i].y)) < X ) 
+                    if (vertices[i].x + (Y-vertices[i].y / (vertices[j].y - vertices[i].y) * (vertices[j].x - vertices[i].y)) < X )
                     {
                         IS_HIT = !IS_HIT;
                         return IS_HIT;
@@ -88,6 +90,23 @@ namespace Projektarbete_grupp_17
         {
             längdavsida = perimeter / antalsidor;
             return längdavsida;
+        }
+        public override double GetRadie()
+        {
+            //double apothem = (längdavsida / 2) / Math.Tan(Math.PI / antalsidor);
+
+
+            double radie = GetApothem() / Math.Cos(Math.PI / antalsidor);
+            return radie;
+
+            // räkna ut apothem med hjälp av trianglar:
+            //  |\
+            // a| \ b
+            //  |__\
+            //    c
+            //a = apothem
+
+
         }
         public double GetApothem()
         {
