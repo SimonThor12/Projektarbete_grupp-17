@@ -42,7 +42,7 @@ namespace Projektarbete_grupp_17
                 offset = 0;
             }
 
-            for (int i = 1; i < antalsidor; i++)
+            for (int i = 0; i < antalsidor; i++)
             {
                 double X = mittpunkt.x + GetApothem() * Math.Sin(i * angle + offset);
                 double Y = mittpunkt.y + GetApothem() * Math.Cos(i * angle + offset);
