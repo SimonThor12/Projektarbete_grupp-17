@@ -19,7 +19,7 @@ namespace Projektarbete_grupp_17
 
         public double längdavsida { get; private set; }
 
-        public double angle = Math.PI * 2 / 2;
+        public double angle;
 
         public Polygon (string formtyp, Koordinat _mittpunkt, double omkrets, int shapeScore, int antalSidor) 
             : base(formtyp, _mittpunkt, omkrets, shapeScore, antalSidor)
@@ -27,7 +27,8 @@ namespace Projektarbete_grupp_17
             perimeter = omkrets;
             antalsidor = antalSidor;
             mittpunkt = _mittpunkt;
-            
+            angle = (Math.PI * 2) / antalsidor;
+
         }
         public void GetKoordinaterFörHörn()
         {
