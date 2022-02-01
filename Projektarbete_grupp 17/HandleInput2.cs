@@ -11,13 +11,13 @@ namespace Projektarbete_grupp_17
         
         public string[] arg2Array;
         
-        int x;
-        int y;
+        private int x;
+        private int y;
 
-        int omkrets;
-        string formtyp;
+        private int omkrets;
+        private string formtyp;
         List<Form> formLista = new List<Form>();
-        int shapeScore;
+        private int shapeScore;
 
         //Tar in "Circle,x,y,perimeter  ;  triangle,x,y,perimeter;"
         

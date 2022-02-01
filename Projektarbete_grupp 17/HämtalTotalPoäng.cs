@@ -8,38 +8,42 @@ namespace Projektarbete_grupp_17
 {
     class HämtalTotalPoäng
     {
-        long totalScore;
-        List<Punkt> punktLista;
-        List<Form> formLista;
-        Dictionary<string, int> shapeScoreLista;
-        HandleAllInput allInput;
+        
+      //  List<Punkt> punktLista;
+       // List<Form> formLista;
+      //  Dictionary<string, int> shapeScoreLista;
+      private HandleAllInput allInput;
 
         public HämtalTotalPoäng (HandleAllInput AllInput)
         {
             allInput = AllInput;
-            this.punktLista = (List<Punkt>)AllInput.punktLista;
-            this.formLista = (List<Form>)AllInput.formLista;
-            this.shapeScoreLista = (Dictionary<string,int>)AllInput.shapeScoreLista;
+        //    this.punktLista = (List<Punkt>)AllInput.punktLista;
+         //   this.formLista = (List<Form>)AllInput.formLista;
+           // this.shapeScoreLista = (Dictionary<string,int>)AllInput.shapeScoreLista;
             //totalScore = KalkTotalPoäng(former, punkt);
            // int [] pointScoreArray = allInput.GetPointScore();
-
+           
         }
 
         public double KalkTotalPoäng()
         {
+            
             double totalPoäng = 0;
 
-            for (int i = 0; i < punktLista.Count; i++)
+            for (int i = 0; i < allInput.punktLista.Count; i++)
             {
-                for (int j = 0; j < formLista.Count; j++)
+                
+                for (int j = 0; j < allInput.formLista.Count; j++)
                 {
-                    if (formLista[j].IsInside(punktLista[i].koordinat))
+                    allInput.shapeScoreLista.TryGetValue(allInput.formLista[j].formtyp, out int value);
+                    if (allInput.formLista[j].IsInside(allInput.punktLista[i].koordinat))
                     {
-                        totalPoäng += formLista[j].GetArea() + punktLista[i].pointScore + allInput.GetShapeScore(formLista[j]);
+                        totalPoäng += allInput.formLista[j].GetArea() + allInput.punktLista[i].pointScore + value;//allInput.GetShapeScore(allInput.formLista[j]);
                     }
-                    else if (!formLista[j].IsInside(punktLista[i].koordinat))
+                    else if (!allInput.formLista[j].IsInside(allInput.punktLista[i].koordinat))
                     {
-                        totalPoäng += (formLista[j].GetArea() + allInput.GetShapeScore(formLista[j])) / 4;
+                        
+                        totalPoäng += ((allInput.formLista[j].GetArea() + value) / 4);//allInput.GetShapeScore(allInput.formLista[j])) / 4;
                     }
 
                    /* if (formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "CIRCLE")

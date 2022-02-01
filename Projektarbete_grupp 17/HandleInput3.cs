@@ -10,10 +10,10 @@ namespace Projektarbete_grupp_17
     {
         public string[] arg3Array;
 
-        string form;
-        int score;
+        private string form;
+        private int score;
 
-        string shapeScore;
+        private string shapeScore;
         //public List<ShapeScore> shapeScores = new List<ShapeScore>();
         public Dictionary<string, int> shapeScoresDictionary = new Dictionary<string, int>();
         public HandleInput3(string arg3)

@@ -10,10 +10,10 @@ namespace Projektarbete_grupp_17
     {
         public string[] arg1Array;
 
-        string punkt;
-        int x;
-        int y;
-        int s;
+        private string punkt;
+        private int x;
+        private int y;
+        private int s;
      
         List<Punkt> punktLista = new List<Punkt>();
 

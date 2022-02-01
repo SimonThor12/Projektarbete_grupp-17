@@ -8,18 +8,18 @@ namespace Projektarbete_grupp_17
 {
     class Polygon : Form
     {
-        public int antalsidor;
-        public double perimeter { get; private set; }
+        private int antalsidor;
+        private double perimeter;
 
-        public List<Koordinat> vertices = new List<Koordinat>();
+        private List<Koordinat> vertices = new List<Koordinat>();
 
-        public double apothem { get; private set; }
+        //private double apothem;
 
         private double offset;
 
-        public double längdavsida { get; private set; }
+        private double längdavsida;
 
-        public double angle;
+        private double angle;
 
        
 

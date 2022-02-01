@@ -8,16 +8,16 @@ namespace Projektarbete_grupp_17
 {
     class Fyrkant : Form
     {
-        public double Sida { get; private set; }
-        public double Omkrets { get; private set; }
-
-        public Koordinat kordinaterFörEnFykant;
+        private double Sida;
         
 
-        public double Ymin { get; private set; }
-        public double Ymax { get; private set; }
-        public double Xmax { get; private set; }
-        public double Xmin { get; private set; }
+        public Koordinat kordinaterFörEnFykant;
+
+
+        private double Ymin;
+        private double Ymax;
+        private double Xmax;
+        private double Xmin;
 
         public override double GetArea()
         {

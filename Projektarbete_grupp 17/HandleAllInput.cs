@@ -20,7 +20,7 @@ namespace Projektarbete_grupp_17
             
         }
 
-        public int GetShapeScore(Form form)
+      /*  public int GetShapeScore(Form form)
         { 
 
             if (shapeScoreLista.TryGetValue(form.formtyp, out int value))
@@ -31,7 +31,7 @@ namespace Projektarbete_grupp_17
             
             return 0;
         }
-
+      
         /*public int GetShapeScoreForSquare()
         {
             foreach (Form form in formLista)
