@@ -11,7 +11,7 @@ namespace Projektarbete_grupp_17
         
 
         public Cirkel(string form, Koordinat mittpunkt, double omkrets) 
-            : base (form, mittpunkt, omkrets, 0)
+            : base (form, mittpunkt, omkrets)
 
         {
             

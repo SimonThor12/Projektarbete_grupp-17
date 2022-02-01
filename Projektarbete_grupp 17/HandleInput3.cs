@@ -14,7 +14,7 @@ namespace Projektarbete_grupp_17
         private int score;
 
         private string shapeScore;
-        //public List<ShapeScore> shapeScores = new List<ShapeScore>();
+
         public Dictionary<string, int> shapeScoresDictionary = new Dictionary<string, int>();
         public HandleInput3(string arg3)
         {
@@ -36,16 +36,13 @@ namespace Projektarbete_grupp_17
                     form = shapeScoreVärden[0];
                     score = Convert.ToInt32(shapeScoreVärden[1]);
                     shapeScoresDictionary.Add(form, score);
-                    //shapeScores.Add(new ShapeScore(form, score));
+
                 }
             }
 
         }
 
-        /*public List<ShapeScore> HandleInput()
-        {
-            return shapeScores;
-        } */
+
         public Dictionary<string, int> HandleInput()
         {
             return shapeScoresDictionary;

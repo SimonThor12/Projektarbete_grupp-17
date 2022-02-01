@@ -24,7 +24,7 @@ namespace Projektarbete_grupp_17
        
 
         public Polygon (string formtyp, Koordinat _mittpunkt, double omkrets, int antalSidor) 
-            : base(formtyp, _mittpunkt, omkrets, antalSidor)
+            : base(formtyp, _mittpunkt, omkrets)
         {
             perimeter = omkrets;
             antalsidor = antalSidor;

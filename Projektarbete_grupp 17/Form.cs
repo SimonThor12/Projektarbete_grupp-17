@@ -17,7 +17,7 @@ namespace Projektarbete_grupp_17
         public string formtyp { get; set; }
 
         
-        public Form (string formtyp, Koordinat _koordinat, double omkrets, int antalSidor)
+        public Form (string formtyp, Koordinat _koordinat, double omkrets)
         {
            // this.antalSidor = antalSidor;
             this.formtyp = formtyp;

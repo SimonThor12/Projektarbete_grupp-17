@@ -17,15 +17,15 @@ namespace Projektarbete_grupp_17
         private int omkrets;
         private string formtyp;
         List<Form> formLista = new List<Form>();
-        private int shapeScore;
 
-        //Tar in "Circle,x,y,perimeter  ;  triangle,x,y,perimeter;"
+
+
         
         public HandleInput2 (string arg2)
 
         {
             Form nyForm;
-            //List<ShapeScore> shapeScores = shapeShoreInput.GetShapeScore();
+           
 
             arg2Array = arg2.Split(";");
             Koordinat koordinat;
@@ -49,13 +49,7 @@ namespace Projektarbete_grupp_17
                     omkrets = Convert.ToInt32(formVärden[3]);
                     koordinat = new Koordinat(x, y);
 
-                    //for (int j = 0; j < shapeScores.Count; j++)
-                    //{
-                    //    if (formtyp == shapeScores[j].form)
-                    //    {
-                    //        shapeScore = shapeScores[j].score;
-                    //    }
-                    //}
+
                     switch (formtyp)
                     {
                         case "CIRCLE":
