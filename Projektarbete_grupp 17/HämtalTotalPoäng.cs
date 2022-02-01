@@ -21,7 +21,7 @@ namespace Projektarbete_grupp_17
             this.formLista = (List<Form>)AllInput.formLista;
             this.shapeScoreLista = (Dictionary<string,int>)AllInput.shapeScoreLista;
             //totalScore = KalkTotalPoäng(former, punkt);
-            int [] pointScoreArray = allInput.GetPointScore();
+           // int [] pointScoreArray = allInput.GetPointScore();
 
         }
 
