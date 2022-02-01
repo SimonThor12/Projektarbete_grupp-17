@@ -30,6 +30,7 @@ namespace Projektarbete_grupp_17
                     Console.WriteLine("Your input for the points is incorrect.\n" +
                     " It should follow this format: X, Y, SCORE." +
                     " Each point should also be separated with a ‘;’");
+                    Environment.Exit(0);
                 }
                 else
                 {
