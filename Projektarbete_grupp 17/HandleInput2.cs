@@ -21,7 +21,7 @@ namespace Projektarbete_grupp_17
 
         //Tar in "Circle,x,y,perimeter  ;  triangle,x,y,perimeter;"
         
-        public HandleInput2 (string arg2, HandleInput3 shapeShoreInput)
+        public HandleInput2 (string arg2)
 
         {
             Form nyForm;
@@ -60,7 +60,7 @@ namespace Projektarbete_grupp_17
                     {
                         case "CIRCLE":
 
-                            nyForm = new Cirkel(formtyp, koordinat, omkrets, shapeScore) ;
+                            nyForm = new Cirkel(formtyp, koordinat, omkrets) ;
                             formLista.Add(nyForm);
 
                             break;
@@ -68,13 +68,13 @@ namespace Projektarbete_grupp_17
                         case "SQUARE":
 
                             
-                            nyForm = new Fyrkant(formtyp, koordinat, omkrets, shapeScore);
+                            nyForm = new Fyrkant(formtyp, koordinat, omkrets);
                             formLista.Add(nyForm);
                            
                             break;
                         case "TRIANGLE":
                             int antalKanter = 3;
-                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore, antalKanter);
+                            nyForm = new Polygon(formtyp, koordinat, omkrets, antalKanter);
                             formLista.Add(nyForm);
 
                             break;
@@ -82,7 +82,7 @@ namespace Projektarbete_grupp_17
 
                             antalKanter = 5;
 
-                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore, antalKanter);
+                            nyForm = new Polygon(formtyp, koordinat, omkrets, antalKanter);
                             formLista.Add(nyForm);
 
                             break;
@@ -90,7 +90,7 @@ namespace Projektarbete_grupp_17
                         case "HEXAGON":
                             antalKanter = 6;
 
-                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore, antalKanter);
+                            nyForm = new Polygon(formtyp, koordinat, omkrets, antalKanter);
                             formLista.Add(nyForm);
 
                             break;
@@ -99,7 +99,7 @@ namespace Projektarbete_grupp_17
 
                             antalKanter = 7;
 
-                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore, antalKanter);
+                            nyForm = new Polygon(formtyp, koordinat, omkrets, antalKanter);
                             formLista.Add(nyForm);
 
                             break;
@@ -109,7 +109,7 @@ namespace Projektarbete_grupp_17
 
                             antalKanter = 8;
 
-                            nyForm = new Polygon(formtyp, koordinat, omkrets, shapeScore, antalKanter);
+                            nyForm = new Polygon(formtyp, koordinat, omkrets, antalKanter);
                             formLista.Add(nyForm);
 
                             break;
