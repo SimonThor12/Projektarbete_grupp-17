@@ -30,6 +30,7 @@ namespace Projektarbete_grupp_17
                     Console.WriteLine("Your input for the scores is incorrect.\n" +
                     " It should follow this format: SHAPE, SHAPE_SCORE." +
                     " Each point should also be separated with a ‘;’");
+                    Environment.Exit(0);
                 }
                 else
                 {
