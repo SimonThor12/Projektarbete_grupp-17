@@ -33,7 +33,16 @@ namespace Projektarbete_grupp_17
             {
                 for (int j = 0; j < formLista.Count; j++)
                 {
-                    if (formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "CIRCLE")
+                    if (formLista[j].IsInside(punktLista[i].koordinat))
+                    {
+                        totalPoäng += formLista[j].GetArea() + punktLista[i].pointScore + allInput.GetShapeScore(formLista[j]);
+                    }
+                    else if (!formLista[j].IsInside(punktLista[i].koordinat))
+                    {
+                        totalPoäng += (formLista[j].GetArea() + allInput.GetShapeScore(formLista[j])) / 4;
+                    }
+
+                   /* if (formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "CIRCLE")
                     {
                         totalPoäng += formLista[j].GetArea() + punktLista[i].pointScore + allInput.GetShapeScoreForCircle();
                     }
@@ -100,7 +109,7 @@ namespace Projektarbete_grupp_17
                     else if (!formLista[j].IsInside(punktLista[i].koordinat) && formLista[j].formtyp == "OCTAGON")
                     {
                         totalPoäng += (formLista[j].GetArea() + allInput.GetShapeScoreForOktagon()) / 4;
-                    }
+                    } */
                 }
                 
             }
