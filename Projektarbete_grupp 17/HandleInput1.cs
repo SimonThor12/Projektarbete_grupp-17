@@ -25,7 +25,11 @@ namespace Projektarbete_grupp_17
             {
                 punkt = arg1Array[i].Trim();
                 string[] punktVärden = punkt.Split(",");
-                if (punktVärden.Length != 3)
+                if (arg1Array.Length - 1 == i && arg1Array[i] == "")
+                {
+
+                }
+                else if (punktVärden.Length != 3)
                 {
                     Console.WriteLine("Your input for the points is incorrect.\n" +
                     " It should follow this format: X, Y, SCORE." +
