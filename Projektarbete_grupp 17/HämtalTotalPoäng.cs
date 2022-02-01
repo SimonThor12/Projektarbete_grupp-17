@@ -30,12 +30,13 @@ namespace Projektarbete_grupp_17
                     allInput.shapeScoreLista.TryGetValue(allInput.formLista[j].formtyp, out int value);
                     if (allInput.formLista[j].IsInside(allInput.punktLista[i].koordinat))
                     {
-                        totalPoäng += allInput.formLista[j].GetArea() + allInput.punktLista[i].pointScore + value;//allInput.GetShapeScore(allInput.formLista[j]);
+                        totalPoäng += allInput.formLista[j].GetArea() + allInput.punktLista[i].pointScore + value;
                     }
                     else if (!allInput.formLista[j].IsInside(allInput.punktLista[i].koordinat))
+
                     {
-                        
-                        totalPoäng += ((allInput.formLista[j].GetArea() + value) / 4);//allInput.GetShapeScore(allInput.formLista[j])) / 4;
+
+                        totalPoäng += ((allInput.formLista[j].GetArea() + value) / 4);
                     }
 
                 }
