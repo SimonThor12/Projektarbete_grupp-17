@@ -37,8 +37,8 @@ namespace Projektarbete_grupp_17
 
                 if (formVärden.Length!=4)
                 {
-                    Console.WriteLine("Your input for the points is incorrect.\n" +
-                  " It should follow this format: X, Y, SCORE." +
+                    Console.WriteLine("Your input for the shapes is incorrect.\n" +
+                  " It should follow this format: SHAPE, X, Y, PERIMETER" +
                   " Each point should also be separated with a ‘;’");
                 }
                 else
