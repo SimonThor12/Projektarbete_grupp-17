@@ -34,8 +34,11 @@ namespace Projektarbete_grupp_17
             {
                 formtyp = arg2Array[i].Trim();
                 string [] formVärden = formtyp.Split(",");
+                if (arg2Array.Length - 1 == i && arg2Array[i] == "")
+                {
 
-                if (formVärden.Length!=4)
+                }
+                else if (formVärden.Length!=4)
                 {
                     Console.WriteLine("Your input for the shapes is incorrect.\n" +
                   " It should follow this format: SHAPE, X, Y, PERIMETER" +

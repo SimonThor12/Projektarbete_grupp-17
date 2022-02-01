@@ -12,14 +12,11 @@ namespace Projektarbete_grupp_17
         public double Radie { get; set; }
         protected Koordinat mittpunkt { get; set; }
 
-        //private int antalSidor;
-
         public string formtyp { get; set; }
 
         
         public Form (string formtyp, Koordinat _koordinat, double omkrets)
         {
-           // this.antalSidor = antalSidor;
             this.formtyp = formtyp;
             mittpunkt = _koordinat;
             Radie = omkrets / (2 * Math.PI);

@@ -24,8 +24,11 @@ namespace Projektarbete_grupp_17
             {
                 shapeScore = arg3Array[i].Trim();
                 string [] shapeScoreVärden = shapeScore.Split(",");
+                if (arg3Array.Length - 1 == i && arg3Array[i] == "")
+                {
 
-                if (shapeScoreVärden.Length != 2)
+                }
+                else if (shapeScoreVärden.Length != 2)
                 {
                     Console.WriteLine("Your input for the scores is incorrect.\n" +
                     " It should follow this format: SHAPE, SHAPE_SCORE." +
