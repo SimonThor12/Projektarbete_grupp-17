@@ -19,11 +19,12 @@ namespace Projektarbete_grupp_17
         public HandleInput3(string arg3)
         {
             arg3Array = arg3.Split(";");
+            string[] shapeScoreVärden;
 
             for (int i = 0; i < arg3Array.Length; i++)
             {
                 shapeScore = arg3Array[i].Trim();
-                string [] shapeScoreVärden = shapeScore.Split(",");
+                shapeScoreVärden = shapeScore.Split(",");
 
                 for (int j = 0; j < shapeScoreVärden.Length; j++)
                 {

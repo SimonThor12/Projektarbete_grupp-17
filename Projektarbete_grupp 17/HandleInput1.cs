@@ -10,7 +10,6 @@ namespace Projektarbete_grupp_17
     {
         public string[] arg1Array;
 
-        private string punkt;
         private int x;
         private int y;
         private int s;
@@ -20,11 +19,12 @@ namespace Projektarbete_grupp_17
         public HandleInput1(string arg1)
         {
             arg1Array = arg1.Split(";");
+            string[] punktVärden;
 
             for (int i = 0; i < arg1Array.Length; i++)
             {
                 
-                string[] punktVärden = arg1Array[i].Split(",");
+                punktVärden = arg1Array[i].Split(",");
                 for (int j = 0; j < punktVärden.Length; j++)
                 {
                     punktVärden[j] = punktVärden[j].Trim();
