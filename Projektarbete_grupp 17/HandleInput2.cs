@@ -62,6 +62,8 @@ namespace Projektarbete_grupp_17
                     switch (formtyp)
                     {
                         case "CIRCLE":
+                        case " CIRCLE":
+                        case "CIRCLE ":
 
                             nyForm = new Cirkel(formtyp, koordinat, omkrets) ;
                             formLista.Add(nyForm);
@@ -69,6 +71,8 @@ namespace Projektarbete_grupp_17
                             break;
 
                         case "SQUARE":
+                        case " SQUARE":
+                        case "SQUARE ":
 
                             
                             nyForm = new Fyrkant(formtyp, koordinat, omkrets);
@@ -76,12 +80,16 @@ namespace Projektarbete_grupp_17
                            
                             break;
                         case "TRIANGLE":
+                        case " TRIANGLE":
+                        case "TRIANGLE ":
                             int antalKanter = 3;
                             nyForm = new Polygon(formtyp, koordinat, omkrets, antalKanter);
                             formLista.Add(nyForm);
 
                             break;
                         case "PENTAGON":
+                        case " PENTAGON":
+                        case "PENTAGON ":
 
                             antalKanter = 5;
 
@@ -91,6 +99,8 @@ namespace Projektarbete_grupp_17
                             break;
 
                         case "HEXAGON":
+                        case " HEXAGON":
+                        case "HEXAGON ":
                             antalKanter = 6;
 
                             nyForm = new Polygon(formtyp, koordinat, omkrets, antalKanter);
@@ -99,6 +109,8 @@ namespace Projektarbete_grupp_17
                             break;
 
                         case "HEPTAGON":
+                        case " HEPTAGON":
+                        case "HEPTAGON ":
 
                             antalKanter = 7;
 
@@ -109,6 +121,8 @@ namespace Projektarbete_grupp_17
 
 
                         case "OCTAGON":
+                        case " OCTAGON":
+                        case "OCTAGON ":
 
                             antalKanter = 8;
 

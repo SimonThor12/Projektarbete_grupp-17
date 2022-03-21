@@ -23,8 +23,8 @@ namespace Projektarbete_grupp_17
 
             for (int i = 0; i < arg1Array.Length; i++)
             {
+                
                 string[] punktVärden = arg1Array[i].Split(",");
-
                 for (int j = 0; j < punktVärden.Length; j++)
                 {
                     punktVärden[j] = punktVärden[j].Trim();
