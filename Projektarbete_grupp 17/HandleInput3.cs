@@ -24,7 +24,11 @@ namespace Projektarbete_grupp_17
             {
                 shapeScore = arg3Array[i].Trim();
                 string [] shapeScoreVärden = shapeScore.Split(",");
-                
+
+                for (int j = 0; j < shapeScoreVärden.Length; j++)
+                {
+                    shapeScoreVärden[j] = shapeScoreVärden[j].Trim();
+                }
                 if (arg3Array.Length - 1 == i && arg3Array[i] == "")
                 {
 

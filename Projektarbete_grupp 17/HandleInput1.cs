@@ -23,10 +23,13 @@ namespace Projektarbete_grupp_17
 
             for (int i = 0; i < arg1Array.Length; i++)
             {
-                punkt = arg1Array[i].Trim();
-                string[] punktVärden = punkt.Split(",");
-                
-               
+                string[] punktVärden = arg1Array[i].Split(",");
+
+                for (int j = 0; j < punktVärden.Length; j++)
+                {
+                    punktVärden[j] = punktVärden[j].Trim();
+                }
+
                 if (arg1Array.Length - 1 == i && arg1Array[i] == "")
                 {
 

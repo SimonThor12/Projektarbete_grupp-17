@@ -34,7 +34,11 @@ namespace Projektarbete_grupp_17
             {
                 formtyp = arg2Array[i].Trim();
                 string [] formVärden = formtyp.Split(",");
-                
+
+                for (int j = 0; j < formVärden.Length; j++)
+                {
+                    formVärden[j] = formVärden[j].Trim();
+                }
                 if (arg2Array.Length - 1 == i && arg2Array[i] == "")
                 {
 
