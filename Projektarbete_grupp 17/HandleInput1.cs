@@ -25,6 +25,8 @@ namespace Projektarbete_grupp_17
             {
                 punkt = arg1Array[i].Trim();
                 string[] punktVärden = punkt.Split(",");
+                
+               
                 if (arg1Array.Length - 1 == i && arg1Array[i] == "")
                 {
 

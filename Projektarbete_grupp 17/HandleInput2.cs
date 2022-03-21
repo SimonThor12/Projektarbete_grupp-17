@@ -34,6 +34,7 @@ namespace Projektarbete_grupp_17
             {
                 formtyp = arg2Array[i].Trim();
                 string [] formVärden = formtyp.Split(",");
+                
                 if (arg2Array.Length - 1 == i && arg2Array[i] == "")
                 {
 

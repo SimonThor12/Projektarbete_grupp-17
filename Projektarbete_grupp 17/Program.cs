@@ -6,11 +6,9 @@ namespace Projektarbete_grupp_17
     {
         static void Main(string[] args)
         {
-            
-
-            HandleInput3 ShapescoreInput = new HandleInput3("TRIANGLE, 3;SQUARE,5;CIRCLE,10;");
-            HandleInput2 FormerInput = new HandleInput2("TRIANGLE, 0, 0, 60;fyrhörning, 1,1,12; CIRCLE, 1,1, 12;fyrhörning, 1,1,12;SQUARE,5,3,10; fyrhörning, 1,1,12");
-            HandleInput1 Input1 = new HandleInput1("1,1,5;2,2,10");
+            HandleInput1 Input1 = new HandleInput1(args[0]);
+            HandleInput2 FormerInput = new HandleInput2(args[1]);
+            HandleInput3 ShapescoreInput = new HandleInput3(args[2]);
             HandleAllInput input = new HandleAllInput(Input1, FormerInput, ShapescoreInput);
             HämtalTotalPoäng TotalPoäng = new HämtalTotalPoäng(input);
             Console.WriteLine(Convert.ToInt32(TotalPoäng.KalkTotalPoäng()));
